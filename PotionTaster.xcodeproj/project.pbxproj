@@ -11,6 +11,7 @@
 		4503CDF71ED7ADE200AB3B78 /* PotionTasterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503CDF61ED7ADE200AB3B78 /* PotionTasterTests.swift */; };
 		4503CDF91ED7ADE200AB3B78 /* PotionTaster.h in Headers */ = {isa = PBXBuildFile; fileRef = 4503CDEB1ED7ADE200AB3B78 /* PotionTaster.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4503CE031ED7AE7F00AB3B78 /* PotionTaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503CE021ED7AE7F00AB3B78 /* PotionTaster.swift */; };
+		45E555471ED7C2A00093D234 /* Plugins in Resources */ = {isa = PBXBuildFile; fileRef = 45E555461ED7C2A00093D234 /* Plugins */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		4503CDF61ED7ADE200AB3B78 /* PotionTasterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotionTasterTests.swift; sourceTree = "<group>"; };
 		4503CDF81ED7ADE200AB3B78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4503CE021ED7AE7F00AB3B78 /* PotionTaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PotionTaster.swift; sourceTree = "<group>"; };
+		45E555461ED7C2A00093D234 /* Plugins */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Plugins; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 		4503CDEA1ED7ADE200AB3B78 /* PotionTaster */ = {
 			isa = PBXGroup;
 			children = (
+				45E555461ED7C2A00093D234 /* Plugins */,
 				4503CDEB1ED7ADE200AB3B78 /* PotionTaster.h */,
 				4503CDEC1ED7ADE200AB3B78 /* Info.plist */,
 				4503CE021ED7AE7F00AB3B78 /* PotionTaster.swift */,
@@ -183,6 +186,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45E555471ED7C2A00093D234 /* Plugins in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +413,7 @@
 				4503CDFE1ED7ADE200AB3B78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4503CDFF1ED7ADE200AB3B78 /* Build configuration list for PBXNativeTarget "PotionTasterTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				4503CE011ED7ADE200AB3B78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
