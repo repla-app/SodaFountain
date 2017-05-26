@@ -8,7 +8,11 @@
 
 import Foundation
 
-class PotionTaster {
-    // pluginsDirectoryPath
-    // pluginsDirectoryURL
+enum PotionTaster {
+    static var pluginsDirectoryPath: String {
+        return Bundle.main.builtInPlugInsPath!
+    }
+    static var pluginsDirectoryURL: URL {
+        return Bundle.main.builtInPlugInsURL!
+    }
 }
