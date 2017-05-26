@@ -11,9 +11,17 @@ import XCTest
 
 class PotionTasterTests: XCTestCase {
     
-    func testExample() {
+    func testPlugins() {
         let path = PotionTaster.pluginsDirectoryPath
         let url = PotionTaster.pluginsDirectoryPath
+
+        let contents = try! FileManager.default.contentsOfDirectory(atPath: path)
+
+        NSLog("path = \(path)")
+
+        NSLog("contents = \(contents)")
+
+        // TODO: Test that the test plugins can be found at this path and this URL
     }
 
 }
