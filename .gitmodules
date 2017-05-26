@@ -1,0 +1,6 @@
+[submodule "PotionTaster/Plugins/IRB.wcplugin"]
+	path = PotionTaster/Plugins/IRB.wcplugin
+	url = git@github.com:potionlab/IRB.wcplugin.git
+[submodule "PotionTaster/Plugins/HTML.wcplugin"]
+	path = PotionTaster/Plugins/HTML.wcplugin
+	url = git@github.com:potionlab/HTML.wcplugin.git

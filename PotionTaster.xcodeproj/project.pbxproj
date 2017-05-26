@@ -10,6 +10,7 @@
 		4503CDF21ED7ADE200AB3B78 /* PotionTaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4503CDE81ED7ADE200AB3B78 /* PotionTaster.framework */; };
 		4503CDF71ED7ADE200AB3B78 /* PotionTasterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503CDF61ED7ADE200AB3B78 /* PotionTasterTests.swift */; };
 		4503CDF91ED7ADE200AB3B78 /* PotionTaster.h in Headers */ = {isa = PBXBuildFile; fileRef = 4503CDEB1ED7ADE200AB3B78 /* PotionTaster.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4503CE031ED7AE7F00AB3B78 /* PotionTaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503CE021ED7AE7F00AB3B78 /* PotionTaster.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		4503CDF11ED7ADE200AB3B78 /* PotionTasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PotionTasterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4503CDF61ED7ADE200AB3B78 /* PotionTasterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotionTasterTests.swift; sourceTree = "<group>"; };
 		4503CDF81ED7ADE200AB3B78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4503CE021ED7AE7F00AB3B78 /* PotionTaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PotionTaster.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				4503CDEB1ED7ADE200AB3B78 /* PotionTaster.h */,
 				4503CDEC1ED7ADE200AB3B78 /* Info.plist */,
+				4503CE021ED7AE7F00AB3B78 /* PotionTaster.swift */,
 			);
 			path = PotionTaster;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					4503CDE71ED7ADE200AB3B78 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					4503CDF01ED7ADE200AB3B78 = {
@@ -196,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4503CE031ED7AE7F00AB3B78 /* PotionTaster.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +324,7 @@
 		4503CDFD1ED7ADE200AB3B78 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -332,6 +338,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.1percenter.PotionTaster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -339,6 +346,7 @@
 		4503CDFE1ED7ADE200AB3B78 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -359,6 +367,7 @@
 		4503CE001ED7ADE200AB3B78 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = PotionTasterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -371,6 +380,7 @@
 		4503CE011ED7ADE200AB3B78 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = PotionTasterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
