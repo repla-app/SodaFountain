@@ -15,11 +15,14 @@ class PotionTasterTests: XCTestCase {
         let path = PotionTaster.pluginsDirectoryPath
         let url = PotionTaster.pluginsDirectoryPath
 
-        let contents = try! FileManager.default.contentsOfDirectory(atPath: path)
+        let pathContents = try! FileManager.default.contentsOfDirectory(atPath: path)
+
+
+
 
         NSLog("path = \(path)")
 
-        NSLog("contents = \(contents)")
+        NSLog("contents = \(pathContents)")
 
         // TODO: Test that the test plugins can be found at this path and this URL
     }

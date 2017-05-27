@@ -16,8 +16,9 @@ public class PotionTaster {
     public static let testPluginNameNoPlugin = "Not a Plugin Name"
     public static let testPluginCommand = "html.rb"
     public static let testPluginCommandTwo = "irb.rb"
-    public static let testPluginPathComponent = "\(testPluginName).\(testPluginFileExtension)"
-    public static let testPluginPathComponentTwo = "\(testPluginNameTwo).\(testPluginFileExtension)"
+    public static let testPluginDirectoryName = "\(testPluginName).\(testPluginFileExtension)"
+    public static let testPluginDirectoryNameTwo = "\(testPluginNameTwo).\(testPluginFileExtension)"
+    public static let testPluginDirectoryNames = [testPluginDirectoryName, testPluginDirectoryNameTwo]
 
     public static var pluginsDirectoryPath: String {
         return Bundle(for: PotionTaster.self).builtInPlugInsPath!
