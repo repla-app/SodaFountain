@@ -20,8 +20,7 @@ public class PotionTaster {
     public static let testPluginDirectoryNameTwo = "\(testPluginNameTwo).\(testPluginFileExtension)"
     public static let testPluginDirectoryNames = [testPluginDirectoryName, testPluginDirectoryNameTwo]
 
-
-    //  Note that these return a symlink
+    // Note that this returns a symlink path
     public static var pluginsDirectoryPath: String {
         return Bundle(for: PotionTaster.self).builtInPlugInsPath!
     }

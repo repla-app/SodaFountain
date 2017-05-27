@@ -18,20 +18,13 @@ class PotionTasterTests: XCTestCase {
         let pathContents = try! FileManager.default.contentsOfDirectory(atPath: path)
         let pathContentsSet = Set(pathContents)
 
-        let urlContents = try! FileManager.default.contentsOfDirectory(at: url,
-                                                                       includingPropertiesForKeys: nil)
+        let urls = try! FileManager.default.contentsOfDirectory(at: url,
+                                                                includingPropertiesForKeys: nil)
+        let urlContents = urls.map { $0.lastPathComponent }
         let urlContentsSet = Set(urlContents)
 
-//        XCTAssertEqual(pathContentsSet, urlContentsSet)
+        XCTAssertEqual(pathContentsSet, urlContentsSet)
         XCTAssertEqual(pathContentsSet, Set(PotionTaster.testPluginDirectoryNames))
-
-        NSLog("path = \(path)")
-        NSLog("pathContents = \(pathContents)")
-
-        NSLog("urlContents = \(urlContents)")
-
-
-        // TODO: Test that the test plugins can be found at this path and this URL
     }
 
 }
