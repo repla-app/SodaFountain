@@ -27,10 +27,19 @@ public class PotionTaster {
     public static var pluginsDirectoryURL: URL {
         return Bundle(for: PotionTaster.self).builtInPlugInsURL!.resolvingSymlinksInPath()
     }
-    public class func pathForPlugin(withName: String) -> String? {
-        return nil
+    public class func pathForPlugin(withName name: String) -> String? {
+        return urlForPlugin(withName: name)?.path
     }
-    public class func urlForPlugin(withName: String) -> URL? {
-        return nil
+    public class func urlForPlugin(withName name: String) -> URL? {
+        let pluginURL = pluginsDirectoryURL
+            .appendingPathComponent(name)
+            .appendingPathExtension(testPluginFileExtension)
+        var isDir: ObjCBool = false
+        guard FileManager.default.fileExists(atPath: pluginURL.path,
+                                             isDirectory: &isDir) else
+        {
+            return nil
+        }
+        return pluginURL
     }
 }
