@@ -22,9 +22,15 @@ public class PotionTaster {
 
     // Note that this returns a symlink path
     public static var pluginsDirectoryPath: String {
-        return Bundle(for: PotionTaster.self).builtInPlugInsPath!
+        return pluginsDirectoryURL.path
     }
     public static var pluginsDirectoryURL: URL {
         return Bundle(for: PotionTaster.self).builtInPlugInsURL!.resolvingSymlinksInPath()
+    }
+    public class func pathForPlugin(withName: String) -> String? {
+        return nil
+    }
+    public class func urlForPlugin(withName: String) -> URL? {
+        return nil
     }
 }
