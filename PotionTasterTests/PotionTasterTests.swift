@@ -29,7 +29,11 @@ class PotionTasterTests: XCTestCase {
 
     func testPluginWithName() {
         for name in PotionTaster.testPluginNames {
+            let url = PotionTaster.urlForPlugin(withName: name)
+            let path = PotionTaster.pathForPlugin(withName: name)
 
+            XCTAssertNotNil(url)
+            XCTAssertNotNil(path)
         }
     }
 }
