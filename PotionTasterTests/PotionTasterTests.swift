@@ -38,11 +38,13 @@ class PotionTasterTests: XCTestCase {
                 return
             }
 
-            var isDir: ObjCBool = false
-            let exists = FileManager.default.fileExists(atPath: path,
-                                                        isDirectory: &isDir)
-            XCTAssertTrue(exists)
-            XCTAssertTrue(isDir.boolValue)
+            for path in [path, url.path] {
+                var isDir: ObjCBool = false
+                let exists = FileManager.default.fileExists(atPath: path,
+                                                            isDirectory: &isDir)
+                XCTAssertTrue(exists)
+                XCTAssertTrue(isDir.boolValue)
+            }
         }
     }
 }
