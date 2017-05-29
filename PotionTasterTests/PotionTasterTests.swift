@@ -29,11 +29,20 @@ class PotionTasterTests: XCTestCase {
 
     func testPluginWithName() {
         for name in PotionTaster.testPluginNames {
-            let url = PotionTaster.urlForPlugin(withName: name)
-            let path = PotionTaster.pathForPlugin(withName: name)
+            guard let url = PotionTaster.urlForPlugin(withName: name) else {
+                XCTFail()
+                return
+            }
+            guard let path = PotionTaster.pathForPlugin(withName: name) else {
+                XCTFail()
+                return
+            }
 
-            XCTAssertNotNil(url)
-            XCTAssertNotNil(path)
+            var isDir: ObjCBool = false
+            let exists = FileManager.default.fileExists(atPath: path,
+                                                        isDirectory: &isDir)
+            XCTAssertTrue(exists)
+            XCTAssertTrue(isDir.boolValue)
         }
     }
 }
