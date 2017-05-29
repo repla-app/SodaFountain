@@ -11,7 +11,7 @@ import XCTest
 
 class PotionTasterTests: XCTestCase {
     
-    func testPlugins() {
+    func testPluginsDirectory() {
         let path = PotionTaster.pluginsDirectoryPath
         let url = PotionTaster.pluginsDirectoryURL
 
@@ -27,4 +27,9 @@ class PotionTasterTests: XCTestCase {
         XCTAssertEqual(pathContentsSet, Set(PotionTaster.testPluginDirectoryNames))
     }
 
+    func testPluginWithName() {
+        for name in PotionTaster.testPluginNames {
+
+        }
+    }
 }

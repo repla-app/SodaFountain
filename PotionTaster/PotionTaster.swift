@@ -18,6 +18,7 @@ public class PotionTaster {
     public static let testPluginCommandTwo = "irb.rb"
     public static let testPluginDirectoryName = "\(testPluginName).\(testPluginFileExtension)"
     public static let testPluginDirectoryNameTwo = "\(testPluginNameTwo).\(testPluginFileExtension)"
+    public static let testPluginNames = [testPluginName, testPluginNameTwo]
     public static let testPluginDirectoryNames = [testPluginDirectoryName, testPluginDirectoryNameTwo]
 
     // Note that this returns a symlink path
