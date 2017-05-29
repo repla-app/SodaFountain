@@ -36,8 +36,10 @@ public class PotionTaster {
             .appendingPathComponent(name)
             .appendingPathExtension(testPluginFileExtension)
         var isDir: ObjCBool = false
-        guard FileManager.default.fileExists(atPath: pluginURL.path,
-                                             isDirectory: &isDir) else
+        guard
+            FileManager.default.fileExists(atPath: pluginURL.path,
+                                           isDirectory: &isDir),
+            isDir.boolValue else
         {
             return nil
         }
