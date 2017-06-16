@@ -13,13 +13,14 @@ public class PotionTaster {
     public static let testPluginFileExtension = "wcplugin"
     public static let testPluginName = "HTML"
     public static let testPluginNameTwo = "IRB"
+    public static let testPluginNameSharedTestResources = "Shared-Test-Resources"
     public static let testPluginNameNoPlugin = "Not a Plugin Name"
     public static let testPluginCommand = "html.rb"
     public static let testPluginCommandTwo = "irb.rb"
     public static let testPluginDirectoryName = "\(testPluginName).\(testPluginFileExtension)"
     public static let testPluginDirectoryNameTwo = "\(testPluginNameTwo).\(testPluginFileExtension)"
-    public static let testPluginNames = [testPluginName, testPluginNameTwo]
-    public static let testPluginDirectoryNames = [testPluginDirectoryName, testPluginDirectoryNameTwo]
+    public static let testPluginNames = [testPluginName, testPluginNameTwo, testPluginNameSharedTestResources]
+    public static let testPluginDirectoryNames = testPluginNames.map { "\($0).\(testPluginFileExtension)" }
 
     // Note that this returns a symlink path
     public static var pluginsDirectoryPath: String {
