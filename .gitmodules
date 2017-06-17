@@ -5,5 +5,5 @@
 	path = PotionTaster/Plugins/HTML.wcplugin
 	url = git@github.com:potionlab/HTML.wcplugin.git
 [submodule "PotionTaster/Plugins/Shared-Test-Resources.wcplugin"]
-	path = PotionTaster/Plugins/Shared-Test-Resources.wcplugin
-	url = git@github.com:potionlab/Shared-Test-Resources.wcplugin.git
+	path = PotionTaster/Plugins/SharedTestResources.wcplugin
+	url = git@github.com:potionlab/SharedTestResources.wcplugin.git
