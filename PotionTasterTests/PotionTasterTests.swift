@@ -12,8 +12,8 @@ import XCTest
 class PotionTasterTests: XCTestCase {
     
     func testPluginsDirectory() {
-        let path = PotionTaster.pluginsDirectoryPath
-        let url = PotionTaster.pluginsDirectoryURL
+        let path = PotionTaster.rootPluginsDirectoryPath
+        let url = PotionTaster.rootPluginsDirectoryURL
 
         let pathContents = try! FileManager.default.contentsOfDirectory(atPath: path)
         let pathContentsSet = Set(pathContents)
@@ -24,7 +24,7 @@ class PotionTasterTests: XCTestCase {
         let urlContentsSet = Set(urlContents)
 
         XCTAssertEqual(pathContentsSet, urlContentsSet)
-        XCTAssertEqual(pathContentsSet, Set(PotionTaster.testPluginDirectoryNames))
+        XCTAssertEqual(pathContentsSet, Set(PotionTaster.testRootPluginDirectoryNames))
     }
 
     func testPluginWithName() {
