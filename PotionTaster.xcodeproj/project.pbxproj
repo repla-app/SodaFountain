@@ -11,9 +11,9 @@
 		4503CDF71ED7ADE200AB3B78 /* PotionTasterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503CDF61ED7ADE200AB3B78 /* PotionTasterTests.swift */; };
 		4503CDF91ED7ADE200AB3B78 /* PotionTaster.h in Headers */ = {isa = PBXBuildFile; fileRef = 4503CDEB1ED7ADE200AB3B78 /* PotionTaster.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4503CE031ED7AE7F00AB3B78 /* PotionTaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503CE021ED7AE7F00AB3B78 /* PotionTaster.swift */; };
-		45BFA2511EF5E70400A25E22 /* SharedTestResources.wcplugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 45BFA2501EF5E6FB00A25E22 /* SharedTestResources.wcplugin */; };
-		45E5554C1ED7C4C40093D234 /* IRB.wcplugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 45E5554B1ED7C4BD0093D234 /* IRB.wcplugin */; };
-		45E5554D1ED7C4C80093D234 /* HTML.wcplugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 45E5554A1ED7C4B50093D234 /* HTML.wcplugin */; };
+		45BFA2511EF5E70400A25E22 /* SharedTestResources.wcplugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 45BFA2501EF5E6FB00A25E22 /* SharedTestResources.wcplugin */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		45E5554C1ED7C4C40093D234 /* IRB.wcplugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 45E5554B1ED7C4BD0093D234 /* IRB.wcplugin */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		45E5554D1ED7C4C80093D234 /* HTML.wcplugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 45E5554A1ED7C4B50093D234 /* HTML.wcplugin */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
