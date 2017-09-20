@@ -25,6 +25,9 @@ public class PotionTaster {
     public static let testPluginNameTestEnvironment = "TestEnvironment"
     public static let testPluginNameTestLog = "TestLog"
 
+    // Special
+    public static let testPluginNameNonexistent = "Nonexistant"
+
     // Metadata
     public static let testPluginFileExtension = "wcplugin"
 

@@ -47,4 +47,9 @@ class PotionTasterTests: XCTestCase {
             }
         }
     }
+
+    func testNonexistantPlugin() {
+        XCTAssertNil(PotionTaster.urlForPlugin(withName: PotionTaster.testPluginNameNonexistent))
+        XCTAssertNil(PotionTaster.pathForPlugin(withName: PotionTaster.testPluginNameNonexistent))
+    }
 }
