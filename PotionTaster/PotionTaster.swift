@@ -26,7 +26,7 @@ public class PotionTaster {
     public static let testPluginNameTestLog = "TestLog"
 
     // Special
-    public static let testPluginNameNonexistent = "Nonexistant"
+    public static let testPluginNameNonexistent = "Nonexistent"
 
     // Metadata
     public static let testPluginFileExtension = "wcplugin"
