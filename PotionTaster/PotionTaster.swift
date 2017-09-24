@@ -18,6 +18,7 @@ public class PotionTaster {
     public static let testPluginNameIRB = "IRB"
     public static let testPluginCommandIRB = "irb.rb"
     public static let testPluginNameSharedTestResources = "SharedTestResources"
+    public static let testPluginNameSharedResources = "SharedResources"
     public static let testPluginNameCat = "Cat"
     public static let testPluginNameHelloWorld = "HelloWorld"
     public static let testPluginNameInvalid = "Invalid"
@@ -49,7 +50,8 @@ public class PotionTaster {
     // Private
     static let testRootPluginNames = [testPluginNameHTML,
                                       testPluginNameIRB,
-                                      testPluginNameSharedTestResources]
+                                      testPluginNameSharedTestResources,
+                                      testPluginNameSharedResources]
     static let testSharedTestResourcesPluginNames = [testPluginNameCat,
                                          testPluginNameHelloWorld,
                                          testPluginNameInvalid,

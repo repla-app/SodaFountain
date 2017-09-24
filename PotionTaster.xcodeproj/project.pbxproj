@@ -11,6 +11,7 @@
 		4503CDF71ED7ADE200AB3B78 /* PotionTasterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503CDF61ED7ADE200AB3B78 /* PotionTasterTests.swift */; };
 		4503CDF91ED7ADE200AB3B78 /* PotionTaster.h in Headers */ = {isa = PBXBuildFile; fileRef = 4503CDEB1ED7ADE200AB3B78 /* PotionTaster.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4503CE031ED7AE7F00AB3B78 /* PotionTaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503CE021ED7AE7F00AB3B78 /* PotionTaster.swift */; };
+		459A53231F7851BF00EFB8AD /* SharedResources.wcplugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 459A53221F7851B900EFB8AD /* SharedResources.wcplugin */; };
 		45BFA2511EF5E70400A25E22 /* SharedTestResources.wcplugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 45BFA2501EF5E6FB00A25E22 /* SharedTestResources.wcplugin */; };
 		45E5554C1ED7C4C40093D234 /* IRB.wcplugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 45E5554B1ED7C4BD0093D234 /* IRB.wcplugin */; };
 		45E5554D1ED7C4C80093D234 /* HTML.wcplugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 45E5554A1ED7C4B50093D234 /* HTML.wcplugin */; };
@@ -33,6 +34,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				459A53231F7851BF00EFB8AD /* SharedResources.wcplugin in CopyFiles */,
 				45BFA2511EF5E70400A25E22 /* SharedTestResources.wcplugin in CopyFiles */,
 				45E5554D1ED7C4C80093D234 /* HTML.wcplugin in CopyFiles */,
 				45E5554C1ED7C4C40093D234 /* IRB.wcplugin in CopyFiles */,
@@ -49,6 +51,7 @@
 		4503CDF61ED7ADE200AB3B78 /* PotionTasterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotionTasterTests.swift; sourceTree = "<group>"; };
 		4503CDF81ED7ADE200AB3B78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4503CE021ED7AE7F00AB3B78 /* PotionTaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PotionTaster.swift; sourceTree = "<group>"; };
+		459A53221F7851B900EFB8AD /* SharedResources.wcplugin */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SharedResources.wcplugin; path = Plugins/SharedResources.wcplugin; sourceTree = "<group>"; };
 		45BFA2501EF5E6FB00A25E22 /* SharedTestResources.wcplugin */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SharedTestResources.wcplugin; path = Plugins/SharedTestResources.wcplugin; sourceTree = "<group>"; };
 		45E5554A1ED7C4B50093D234 /* HTML.wcplugin */ = {isa = PBXFileReference; lastKnownFileType = folder; name = HTML.wcplugin; path = Plugins/HTML.wcplugin; sourceTree = "<group>"; };
 		45E5554B1ED7C4BD0093D234 /* IRB.wcplugin */ = {isa = PBXFileReference; lastKnownFileType = folder; name = IRB.wcplugin; path = Plugins/IRB.wcplugin; sourceTree = "<group>"; };
@@ -114,6 +117,7 @@
 		45E555491ED7C4A60093D234 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				459A53221F7851B900EFB8AD /* SharedResources.wcplugin */,
 				45BFA2501EF5E6FB00A25E22 /* SharedTestResources.wcplugin */,
 				45E5554B1ED7C4BD0093D234 /* IRB.wcplugin */,
 				45E5554A1ED7C4B50093D234 /* HTML.wcplugin */,

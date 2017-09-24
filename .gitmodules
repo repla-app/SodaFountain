@@ -7,3 +7,6 @@
 [submodule "PotionTaster/Plugins/Shared-Test-Resources.wcplugin"]
 	path = PotionTaster/Plugins/SharedTestResources.wcplugin
 	url = git@github.com:potionlab/SharedTestResources.wcplugin.git
+[submodule "PotionTaster/Plugins/SharedResources.wcplugin"]
+	path = PotionTaster/Plugins/SharedResources.wcplugin
+	url = git@github.com:potionlab/SharedResources.wcplugin.git
