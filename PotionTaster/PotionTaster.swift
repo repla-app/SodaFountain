@@ -9,7 +9,6 @@
 import Foundation
 
 public class PotionTaster {
-
     // Public
 
     // Plugins
@@ -48,21 +47,25 @@ public class PotionTaster {
     public static let testPluginDirectoryNameTwo = "\(testPluginNameTwo).\(testPluginFileExtension)"
 
     // Private
-    static let testRootPluginNames = [testPluginNameHTML,
-                                      testPluginNameIRB,
-                                      testPluginNameSharedTestResources,
-                                      testPluginNameSharedResources]
-    static let testSharedTestResourcesPluginNames = [testPluginNameCat,
-                                         testPluginNameHelloWorld,
-                                         testPluginNameInvalid,
-                                         testPluginNamePrint,
-                                         testPluginNameTestEnvironment,
-                                         testPluginNameTestLog]
+    static let testRootPluginNames = [
+        testPluginNameHTML,
+        testPluginNameIRB,
+        testPluginNameSharedTestResources,
+        testPluginNameSharedResources
+    ]
+    static let testSharedTestResourcesPluginNames = [
+        testPluginNameCat,
+        testPluginNameHelloWorld,
+        testPluginNameInvalid,
+        testPluginNamePrint,
+        testPluginNameTestEnvironment,
+        testPluginNameTestLog
+    ]
     static let pluginResourcesPathComponent = "Contents/Resources"
     static let sharedTestResourcesPluginDirectory = "plugin"
 
     // Directories
-    
+
     public static var rootPluginsDirectoryPath: String {
         return rootPluginsDirectoryURL.path
     }
@@ -71,7 +74,7 @@ public class PotionTaster {
     }
 
     // Shared Test Resources Directories
-    
+
     public static var sharedTestResourcesPluginsDirectoryURL: URL {
         let pluginURL = PotionTaster.urlForPlugin(withName: PotionTaster.testPluginNameSharedTestResources)!
         return pluginURL
@@ -83,7 +86,7 @@ public class PotionTaster {
     }
 
     // Plugins
-    
+
     public class func pathForPlugin(withName name: String) -> String? {
         return urlForPlugin(withName: name)?.path
     }
@@ -97,8 +100,7 @@ public class PotionTaster {
         guard
             FileManager.default.fileExists(atPath: pluginURL.path,
                                            isDirectory: &isDir),
-            isDir.boolValue else
-        {
+            isDir.boolValue else {
             return nil
         }
         return pluginURL

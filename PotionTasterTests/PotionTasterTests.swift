@@ -6,11 +6,10 @@
 //  Copyright © 2017 Roben Kleene. All rights reserved.
 //
 
-import XCTest
 @testable import PotionTaster
+import XCTest
 
 class PotionTasterTests: XCTestCase {
-    
     func testPluginsDirectory() {
         let path = PotionTaster.rootPluginsDirectoryPath
         let url = PotionTaster.rootPluginsDirectoryURL
