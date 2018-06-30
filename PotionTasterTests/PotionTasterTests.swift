@@ -14,11 +14,17 @@ class PotionTasterTests: XCTestCase {
         let path = PotionTaster.rootPluginsDirectoryPath
         let url = PotionTaster.rootPluginsDirectoryURL
 
-        let pathContents = try! FileManager.default.contentsOfDirectory(atPath: path)
+        guard let pathContents = try? FileManager.default.contentsOfDirectory(atPath: path) else {
+            XCTFail()
+            return
+        }
         let pathContentsSet = Set(pathContents)
 
-        let urls = try! FileManager.default.contentsOfDirectory(at: url,
-                                                                includingPropertiesForKeys: nil)
+        guard let urls = try? FileManager.default.contentsOfDirectory(at: url,
+                                                                      includingPropertiesForKeys: nil) else {
+            XCTFail()
+            return
+        }
         let urlContents = urls.map { $0.lastPathComponent }
         let urlContentsSet = Set(urlContents)
 
