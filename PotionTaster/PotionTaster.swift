@@ -33,9 +33,12 @@ public class PotionTaster {
 
     // Collections
     static let testRootPluginDirectoryNames = testRootPluginNames.map { "\($0).\(testPluginFileExtension)" }
-    static let testSharedTestResourcesPluginDirectoryNames = testRootPluginNames.map { "\($0).\(testPluginFileExtension)" }
+    static let testSharedTestResourcesPluginDirectoryNames = testRootPluginNames.map {
+        "\($0).\(testPluginFileExtension)"
+    }
     public static let testPluginNames = testRootPluginNames + testSharedTestResourcesPluginNames
-    public static let testPluginDirectoryNames = testRootPluginDirectoryNames + testSharedTestResourcesPluginDirectoryNames
+    public static let testPluginDirectoryNames = testRootPluginDirectoryNames
+        + testSharedTestResourcesPluginDirectoryNames
 
     // Generic
     public static let testPluginName = testPluginNameHTML
@@ -91,7 +94,8 @@ public class PotionTaster {
         return urlForPlugin(withName: name)?.path
     }
     public class func urlForPlugin(withName name: String) -> URL? {
-        let pluginsDirectoryURL = isSharedTestResourcesPluginName(name) ? sharedTestResourcesPluginsDirectoryURL : rootPluginsDirectoryURL
+        let pluginsDirectoryURL = isSharedTestResourcesPluginName(name) ? sharedTestResourcesPluginsDirectoryURL
+            : rootPluginsDirectoryURL
         let pluginURL = pluginsDirectoryURL
             .appendingPathComponent(name)
             .appendingPathExtension(testPluginFileExtension)
