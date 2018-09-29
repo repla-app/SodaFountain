@@ -1,12 +1,12 @@
 [submodule "PotionTaster/Plugins/IRB.wcplugin"]
 	path = PotionTaster/Plugins/IRB.wcplugin
-	url = ../IRB.wcplugin.git
+	url = https://github.com/thepotionlab/IRB.wcplugin.git
 [submodule "PotionTaster/Plugins/HTML.wcplugin"]
 	path = PotionTaster/Plugins/HTML.wcplugin
-	url = ../HTML.wcplugin.git
+	url = https://github.com/thepotionlab/HTML.wcplugin.git
 [submodule "PotionTaster/Plugins/Shared-Test-Resources.wcplugin"]
 	path = PotionTaster/Plugins/SharedTestResources.wcplugin
-	url = ../SharedTestResources.wcplugin.git
+	url = https://github.com/thepotionlab/SharedTestResources.wcplugin.git
 [submodule "PotionTaster/Plugins/SharedResources.wcplugin"]
 	path = PotionTaster/Plugins/SharedResources.wcplugin
-	url = ../SharedResources.wcplugin.git
+	url = https://github.com/thepotionlab/SharedResources.wcplugin.git
