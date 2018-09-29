@@ -1,3 +1,25 @@
 language: swift
 osx_image: xcode10
 script: make ci
+xcode_project: PotionTaster
+xcode_scheme: PotionTaster
+env:
+  global:
+  - FRAMEWORK_NAME=PotionTaster
+before_install:
+- brew update
+- brew outdated carthage || brew upgrade carthage
+before_script:
+- make lint
+before_deploy:
+- carthage build --no-skip-current
+- carthage archive $FRAMEWORK_NAME
+deploy:
+  provider: releases
+  api_key:
+    secure: BRHIbUJyXqGPNB2jteUaZZNUMSfHkmtGFV2bPn73vr5Nc8vRgtAnlCfINaK+RYexJSdsV4X4LjSIHKt1Jjrir8wD/mNd5zWueVUKqXx8nK0JJ/i9LxHUU3nrl3bIt9dC6ubYqL3mcxHfTv+V+O8WUXUt2zHFflptdcJ1w8jQYJP904sn19Zunng/T+B/O5+xspGUFUKIQ5fKbDbuEZyOSP719o0AQJF8OqSlP6CWUTJco8EUflyrdce9SPzPSO0nOiFZwiVS8QZ7Qs8yb818gzwcScgv5fpZURBAsfGJiNBT4ZfkQwO3jBRKOHHgV5l2bB+aYW+vM//KE4IKvT3Ah4buITHbND7lTlnNjyvEQToJwStoWrEtPlrtd2TkeP35/zcUjf/ImuETRiWCfadEX47owq+lPDra8DD9MlOwmbWjBR485YKjGlZfZB+wbVoW0h7r+aYuNMhYpY2FoGAadtbkKBiNT2GhLnXWwMjeSRterLY2CyQkMro0DuHwHcK+Y9WZgWck3M7WTzt1J632NmIk1DeIjsrtYyJ1i9Hj3Gdxx6iUC6Xa5bPMi3uMay1Txq5u0tgC5OovUErkJdhBtZJpmwQfj0Y8dVhR4d0WOxI/JrHlTrAZ+k1dUk92GxC5lvvnUrNqdyccGZk1i6XueOOhUuRhUiyVXTW7JwpJIcw=
+  file: PotionTaster.framework.zip
+  skip_cleanup: true
+  on:
+    repo: thepotionlab/PotionTaster
+    tags: true
