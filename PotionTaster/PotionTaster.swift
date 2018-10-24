@@ -65,6 +65,7 @@ public class PotionTaster {
         testPluginNameTestLog
     ]
     static let pluginResourcesPathComponent = "Contents/Resources"
+    static let rootPluginsPathComponent = "Bundles"
     static let sharedTestResourcesPluginDirectory = "plugin"
 
     // Directories
@@ -73,7 +74,8 @@ public class PotionTaster {
         return rootPluginsDirectoryURL.path
     }
     public static var rootPluginsDirectoryURL: URL {
-        return Bundle(for: PotionTaster.self).builtInPlugInsURL!.resolvingSymlinksInPath()
+        return Bundle(for: PotionTaster.self).url(forResource: rootPluginsPathComponent,
+                                                  withExtension: nil)!
     }
 
     // Shared Test Resources Directories

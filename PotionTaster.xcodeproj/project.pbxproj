@@ -11,10 +11,7 @@
 		4503CDF71ED7ADE200AB3B78 /* PotionTasterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503CDF61ED7ADE200AB3B78 /* PotionTasterTests.swift */; };
 		4503CDF91ED7ADE200AB3B78 /* PotionTaster.h in Headers */ = {isa = PBXBuildFile; fileRef = 4503CDEB1ED7ADE200AB3B78 /* PotionTaster.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4503CE031ED7AE7F00AB3B78 /* PotionTaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503CE021ED7AE7F00AB3B78 /* PotionTaster.swift */; };
-		459A53231F7851BF00EFB8AD /* SharedResources.wcplugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 459A53221F7851B900EFB8AD /* SharedResources.wcplugin */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		45BFA2511EF5E70400A25E22 /* SharedTestResources.wcplugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 45BFA2501EF5E6FB00A25E22 /* SharedTestResources.wcplugin */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		45E5554C1ED7C4C40093D234 /* IRB.wcplugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 45E5554B1ED7C4BD0093D234 /* IRB.wcplugin */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		45E5554D1ED7C4C80093D234 /* HTML.wcplugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 45E5554A1ED7C4B50093D234 /* HTML.wcplugin */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		458AE1D42180EF1200C330E4 /* Bundles in Resources */ = {isa = PBXBuildFile; fileRef = 458AE1D22180EEE700C330E4 /* Bundles */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,22 +24,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		45E555481ED7C48D0093D234 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				459A53231F7851BF00EFB8AD /* SharedResources.wcplugin in CopyFiles */,
-				45BFA2511EF5E70400A25E22 /* SharedTestResources.wcplugin in CopyFiles */,
-				45E5554D1ED7C4C80093D234 /* HTML.wcplugin in CopyFiles */,
-				45E5554C1ED7C4C40093D234 /* IRB.wcplugin in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		4503CDE81ED7ADE200AB3B78 /* PotionTaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PotionTaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4503CDEB1ED7ADE200AB3B78 /* PotionTaster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PotionTaster.h; sourceTree = "<group>"; };
@@ -51,10 +32,7 @@
 		4503CDF61ED7ADE200AB3B78 /* PotionTasterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotionTasterTests.swift; sourceTree = "<group>"; };
 		4503CDF81ED7ADE200AB3B78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4503CE021ED7AE7F00AB3B78 /* PotionTaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PotionTaster.swift; sourceTree = "<group>"; };
-		459A53221F7851B900EFB8AD /* SharedResources.wcplugin */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SharedResources.wcplugin; path = Plugins/SharedResources.wcplugin; sourceTree = "<group>"; };
-		45BFA2501EF5E6FB00A25E22 /* SharedTestResources.wcplugin */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SharedTestResources.wcplugin; path = Plugins/SharedTestResources.wcplugin; sourceTree = "<group>"; };
-		45E5554A1ED7C4B50093D234 /* HTML.wcplugin */ = {isa = PBXFileReference; lastKnownFileType = folder; name = HTML.wcplugin; path = Plugins/HTML.wcplugin; sourceTree = "<group>"; };
-		45E5554B1ED7C4BD0093D234 /* IRB.wcplugin */ = {isa = PBXFileReference; lastKnownFileType = folder; name = IRB.wcplugin; path = Plugins/IRB.wcplugin; sourceTree = "<group>"; };
+		458AE1D22180EEE700C330E4 /* Bundles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bundles; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +75,7 @@
 		4503CDEA1ED7ADE200AB3B78 /* PotionTaster */ = {
 			isa = PBXGroup;
 			children = (
-				45E555491ED7C4A60093D234 /* Plugins */,
+				458AE1D22180EEE700C330E4 /* Bundles */,
 				4503CDEB1ED7ADE200AB3B78 /* PotionTaster.h */,
 				4503CDEC1ED7ADE200AB3B78 /* Info.plist */,
 				4503CE021ED7AE7F00AB3B78 /* PotionTaster.swift */,
@@ -112,17 +90,6 @@
 				4503CDF81ED7ADE200AB3B78 /* Info.plist */,
 			);
 			path = PotionTasterTests;
-			sourceTree = "<group>";
-		};
-		45E555491ED7C4A60093D234 /* Plugins */ = {
-			isa = PBXGroup;
-			children = (
-				459A53221F7851B900EFB8AD /* SharedResources.wcplugin */,
-				45BFA2501EF5E6FB00A25E22 /* SharedTestResources.wcplugin */,
-				45E5554B1ED7C4BD0093D234 /* IRB.wcplugin */,
-				45E5554A1ED7C4B50093D234 /* HTML.wcplugin */,
-			);
-			name = Plugins;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,9 +111,9 @@
 			buildConfigurationList = 4503CDFC1ED7ADE200AB3B78 /* Build configuration list for PBXNativeTarget "PotionTaster" */;
 			buildPhases = (
 				4503CDE31ED7ADE200AB3B78 /* Sources */,
+				458AE1D32180EF0600C330E4 /* Resources */,
 				4503CDE41ED7ADE200AB3B78 /* Frameworks */,
 				4503CDE51ED7ADE200AB3B78 /* Headers */,
-				45E555481ED7C48D0093D234 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -220,6 +187,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		458AE1D32180EF0600C330E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				458AE1D42180EF1200C330E4 /* Bundles in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
