@@ -20,7 +20,7 @@
 			containerPortal = 4503CDDF1ED7ADE200AB3B78 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4503CDE71ED7ADE200AB3B78;
-			remoteInfo = PotionTaster;
+			remoteInfo = SodaTaster;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -120,7 +120,7 @@
 			dependencies = (
 			);
 			name = SodaTaster;
-			productName = PotionTaster;
+			productName = SodaTaster;
 			productReference = 4503CDE81ED7ADE200AB3B78 /* SodaTaster.framework */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -138,7 +138,7 @@
 				4503CDF41ED7ADE200AB3B78 /* PBXTargetDependency */,
 			);
 			name = SodaTasterTests;
-			productName = PotionTasterTests;
+			productName = SodaTasterTests;
 			productReference = 4503CDF11ED7ADE200AB3B78 /* SodaTasterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
