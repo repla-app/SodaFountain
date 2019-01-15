@@ -1,6 +1,6 @@
 //
-//  PotionTaster.swift
-//  PotionTaster
+//  SodaTaster.swift
+//  SodaTaster
 //
 //  Created by Roben Kleene on 5/25/17.
 //  Copyright © 2017 Roben Kleene. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class PotionTaster {
+public class SodaTaster {
     // Public
 
     // Plugins
@@ -74,14 +74,14 @@ public class PotionTaster {
         return rootPluginsDirectoryURL.path
     }
     public static var rootPluginsDirectoryURL: URL {
-        return Bundle(for: PotionTaster.self).url(forResource: rootPluginsPathComponent,
+        return Bundle(for: SodaTaster.self).url(forResource: rootPluginsPathComponent,
                                                   withExtension: nil)!
     }
 
     // Shared Test Resources Directories
 
     public static var sharedTestResourcesPluginsDirectoryURL: URL {
-        let pluginURL = PotionTaster.urlForPlugin(withName: PotionTaster.testPluginNameSharedTestResources)!
+        let pluginURL = SodaTaster.urlForPlugin(withName: SodaTaster.testPluginNameSharedTestResources)!
         return pluginURL
             .appendingPathComponent(pluginResourcesPathComponent)
             .appendingPathComponent(sharedTestResourcesPluginDirectory)

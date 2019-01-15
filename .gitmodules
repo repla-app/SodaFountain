@@ -1,12 +1,12 @@
 [submodule "PotionTaster/Plugins/IRB.wcplugin"]
-	path = PotionTaster/Bundles/IRB.wcplugin
-	url = https://github.com/thepotionlab/IRB.wcplugin.git
+	path = SodaTaster/Bundles/IRB.wcplugin
+	url = https://github.com/repla-app/IRB.wcplugin.git
 [submodule "PotionTaster/Plugins/HTML.wcplugin"]
-	path = PotionTaster/Bundles/HTML.wcplugin
-	url = https://github.com/thepotionlab/HTML.wcplugin.git
+	path = SodaTaster/Bundles/HTML.wcplugin
+	url = https://github.com/repla-app/HTML.wcplugin.git
 [submodule "PotionTaster/Plugins/Shared-Test-Resources.wcplugin"]
-	path = PotionTaster/Bundles/SharedTestResources.wcplugin
-	url = https://github.com/thepotionlab/SharedTestResources.wcplugin.git
+	path = SodaTaster/Bundles/SharedTestResources.wcplugin
+	url = https://github.com/repla-app/SharedTestResources.wcplugin.git
 [submodule "PotionTaster/Plugins/SharedResources.wcplugin"]
-	path = PotionTaster/Bundles/SharedResources.wcplugin
-	url = https://github.com/thepotionlab/SharedResources.wcplugin.git
+	path = SodaTaster/Bundles/SharedResources.wcplugin
+	url = https://github.com/repla-app/SharedResources.wcplugin.git

@@ -1,4 +1,4 @@
-SCHEME = PotionTaster
+SCHEME = SodaTaster
 
 .PHONY: build test lint autocorrect swiftformat swiftlint_autocorrect bootstrap
 

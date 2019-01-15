@@ -1,18 +1,18 @@
 //
-//  PotionTasterTests.swift
-//  PotionTasterTests
+//  SodaTasterTests.swift
+//  SodaTasterTests
 //
 //  Created by Roben Kleene on 5/25/17.
 //  Copyright © 2017 Roben Kleene. All rights reserved.
 //
 
-@testable import PotionTaster
+@testable import SodaTaster
 import XCTest
 
-class PotionTasterTests: XCTestCase {
+class SodaTasterTests: XCTestCase {
     func testPluginsDirectory() {
-        let path = PotionTaster.rootPluginsDirectoryPath
-        let url = PotionTaster.rootPluginsDirectoryURL
+        let path = SodaTaster.rootPluginsDirectoryPath
+        let url = SodaTaster.rootPluginsDirectoryURL
 
         guard let pathContents = try? FileManager.default.contentsOfDirectory(atPath: path) else {
             XCTFail()
@@ -29,16 +29,16 @@ class PotionTasterTests: XCTestCase {
         let urlContentsSet = Set(urlContents)
 
         XCTAssertEqual(pathContentsSet, urlContentsSet)
-        XCTAssertEqual(pathContentsSet, Set(PotionTaster.testRootPluginDirectoryNames))
+        XCTAssertEqual(pathContentsSet, Set(SodaTaster.testRootPluginDirectoryNames))
     }
 
     func testPluginWithName() {
-        for name in PotionTaster.testPluginNames {
-            guard let url = PotionTaster.urlForPlugin(withName: name) else {
+        for name in SodaTaster.testPluginNames {
+            guard let url = SodaTaster.urlForPlugin(withName: name) else {
                 XCTFail()
                 return
             }
-            guard let path = PotionTaster.pathForPlugin(withName: name) else {
+            guard let path = SodaTaster.pathForPlugin(withName: name) else {
                 XCTFail()
                 return
             }
@@ -54,7 +54,7 @@ class PotionTasterTests: XCTestCase {
     }
 
     func testNonexistantPlugin() {
-        XCTAssertNil(PotionTaster.urlForPlugin(withName: PotionTaster.testPluginNameNonexistent))
-        XCTAssertNil(PotionTaster.pathForPlugin(withName: PotionTaster.testPluginNameNonexistent))
+        XCTAssertNil(SodaTaster.urlForPlugin(withName: SodaTaster.testPluginNameNonexistent))
+        XCTAssertNil(SodaTaster.pathForPlugin(withName: SodaTaster.testPluginNameNonexistent))
     }
 }
