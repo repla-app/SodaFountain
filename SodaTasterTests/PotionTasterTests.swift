@@ -6,7 +6,7 @@
 //  Copyright © 2017 Roben Kleene. All rights reserved.
 //
 
-@testable import PotionTaster
+@testable import SodaTaster
 import XCTest
 
 class PotionTasterTests: XCTestCase {

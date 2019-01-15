@@ -57,8 +57,8 @@
 		4503CDDE1ED7ADE200AB3B78 = {
 			isa = PBXGroup;
 			children = (
-				4503CDEA1ED7ADE200AB3B78 /* PotionTaster */,
-				4503CDF51ED7ADE200AB3B78 /* PotionTasterTests */,
+				4503CDEA1ED7ADE200AB3B78 /* SodaTaster */,
+				4503CDF51ED7ADE200AB3B78 /* SodaTasterTests */,
 				4503CDE91ED7ADE200AB3B78 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,7 +72,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4503CDEA1ED7ADE200AB3B78 /* PotionTaster */ = {
+		4503CDEA1ED7ADE200AB3B78 /* SodaTaster */ = {
 			isa = PBXGroup;
 			children = (
 				458AE1D22180EEE700C330E4 /* Bundles */,
@@ -80,16 +80,16 @@
 				4503CDEC1ED7ADE200AB3B78 /* Info.plist */,
 				4503CE021ED7AE7F00AB3B78 /* PotionTaster.swift */,
 			);
-			path = PotionTaster;
+			path = SodaTaster;
 			sourceTree = "<group>";
 		};
-		4503CDF51ED7ADE200AB3B78 /* PotionTasterTests */ = {
+		4503CDF51ED7ADE200AB3B78 /* SodaTasterTests */ = {
 			isa = PBXGroup;
 			children = (
 				4503CDF61ED7ADE200AB3B78 /* PotionTasterTests.swift */,
 				4503CDF81ED7ADE200AB3B78 /* Info.plist */,
 			);
-			path = PotionTasterTests;
+			path = SodaTasterTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,7 +164,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4503CDE21ED7ADE200AB3B78 /* Build configuration list for PBXProject "PotionTaster" */;
+			buildConfigurationList = 4503CDE21ED7ADE200AB3B78 /* Build configuration list for PBXProject "SodaTaster" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -353,10 +353,10 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = PotionTaster/Info.plist;
+				INFOPLIST_FILE = SodaTaster/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.1percenter.PotionTaster;
+				PRODUCT_BUNDLE_IDENTIFIER = com.1percenter.SodaTaster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -375,10 +375,10 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = PotionTaster/Info.plist;
+				INFOPLIST_FILE = SodaTaster/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.1percenter.PotionTaster;
+				PRODUCT_BUNDLE_IDENTIFIER = com.1percenter.SodaTaster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -390,9 +390,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = PotionTasterTests/Info.plist;
+				INFOPLIST_FILE = SodaTasterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.1percenter.PotionTasterTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.1percenter.SodaTasterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -403,9 +403,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = PotionTasterTests/Info.plist;
+				INFOPLIST_FILE = SodaTasterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.1percenter.PotionTasterTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.1percenter.SodaTasterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -414,7 +414,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4503CDE21ED7ADE200AB3B78 /* Build configuration list for PBXProject "PotionTaster" */ = {
+		4503CDE21ED7ADE200AB3B78 /* Build configuration list for PBXProject "SodaTaster" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4503CDFA1ED7ADE200AB3B78 /* Debug */,

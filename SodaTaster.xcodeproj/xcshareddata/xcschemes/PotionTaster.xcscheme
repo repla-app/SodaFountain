@@ -17,7 +17,7 @@
                BlueprintIdentifier = "4503CDE71ED7ADE200AB3B78"
                BuildableName = "SodaTaster.framework"
                BlueprintName = "SodaTaster"
-               ReferencedContainer = "container:PotionTaster.xcodeproj">
+               ReferencedContainer = "container:SodaTaster.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "4503CDF01ED7ADE200AB3B78"
                BuildableName = "SodaTasterTests.xctest"
                BlueprintName = "SodaTasterTests"
-               ReferencedContainer = "container:PotionTaster.xcodeproj">
+               ReferencedContainer = "container:SodaTaster.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,7 +45,7 @@
             BlueprintIdentifier = "4503CDE71ED7ADE200AB3B78"
             BuildableName = "SodaTaster.framework"
             BlueprintName = "SodaTaster"
-            ReferencedContainer = "container:PotionTaster.xcodeproj">
+            ReferencedContainer = "container:SodaTaster.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -67,7 +67,7 @@
             BlueprintIdentifier = "4503CDE71ED7ADE200AB3B78"
             BuildableName = "SodaTaster.framework"
             BlueprintName = "SodaTaster"
-            ReferencedContainer = "container:PotionTaster.xcodeproj">
+            ReferencedContainer = "container:SodaTaster.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -85,7 +85,7 @@
             BlueprintIdentifier = "4503CDE71ED7ADE200AB3B78"
             BuildableName = "SodaTaster.framework"
             BlueprintName = "SodaTaster"
-            ReferencedContainer = "container:PotionTaster.xcodeproj">
+            ReferencedContainer = "container:SodaTaster.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
