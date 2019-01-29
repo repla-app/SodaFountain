@@ -31,12 +31,12 @@ public class SodaTaster {
 
     // Collections
     static let testRootPluginDirectoryNames = testRootPluginNames.map { "\($0).\(testPluginFileExtension)" }
-    static let testSharedTestResourcesPluginDirectoryNames = testRootPluginNames.map {
+    static let testBundlePluginDirectoryNames = testRootPluginNames.map {
         "\($0).\(testPluginFileExtension)"
     }
-    public static let testPluginNames = testRootPluginNames + testSharedTestResourcesPluginNames
+    public static let testPluginNames = testRootPluginNames + testBundlePluginNames
     public static let testPluginDirectoryNames = testRootPluginDirectoryNames
-        + testSharedTestResourcesPluginDirectoryNames
+        + testBundlePluginDirectoryNames
 
     // Generic
     public static let testPluginName = testPluginNameHTML
@@ -52,7 +52,7 @@ public class SodaTaster {
         testPluginNameHTML,
         testPluginNameIRB
     ]
-    static let testSharedTestResourcesPluginNames = [
+    static let testBundlePluginNames = [
         testPluginNameCat,
         testPluginNameHelloWorld,
         testPluginNameInvalid,
@@ -90,7 +90,7 @@ public class SodaTaster {
         return urlForPlugin(withName: name)?.path
     }
     public class func urlForPlugin(withName name: String) -> URL? {
-        let pluginsDirectoryURL = isSharedTestResourcesPluginName(name) ? testPluginsDirectoryURL
+        let pluginsDirectoryURL = isTestPluginName(name) ? testPluginsDirectoryURL
             : rootPluginsDirectoryURL
         let pluginURL = pluginsDirectoryURL
             .appendingPathComponent(name)
@@ -108,7 +108,7 @@ public class SodaTaster {
 
     // Helper
 
-    private class func isSharedTestResourcesPluginName(_ name: String) -> Bool {
-        return testSharedTestResourcesPluginNames.contains(name)
+    private class func isTestPluginName(_ name: String) -> Bool {
+        return testPluginNames.contains(name)
     }
 }
