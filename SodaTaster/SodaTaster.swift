@@ -101,7 +101,7 @@ public class SodaTaster {
             FileManager.default.fileExists(atPath: pluginURL.path,
                                            isDirectory: &isDir),
             isDir.boolValue else {
-            return nil
+                return nil
         }
         return pluginURL
     }
@@ -109,6 +109,6 @@ public class SodaTaster {
     // Helper
 
     private class func isTestPluginName(_ name: String) -> Bool {
-        return testPluginNames.contains(name)
+        return testBundlePluginNames.contains(name)
     }
 }
