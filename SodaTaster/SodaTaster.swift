@@ -71,7 +71,7 @@ public class SodaTaster {
     }
     public static var rootPluginsDirectoryURL: URL {
         return Bundle(for: SodaTaster.self).url(forResource: rootPluginsPathComponent,
-                                                  withExtension: nil)!
+                                                withExtension: nil)!
     }
 
     // Shared Test Resources Directories
@@ -101,7 +101,7 @@ public class SodaTaster {
             FileManager.default.fileExists(atPath: pluginURL.path,
                                            isDirectory: &isDir),
             isDir.boolValue else {
-                return nil
+            return nil
         }
         return pluginURL
     }
