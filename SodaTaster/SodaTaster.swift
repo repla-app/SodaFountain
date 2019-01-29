@@ -16,8 +16,6 @@ public class SodaTaster {
     public static let testPluginCommandHTML = "html.rb"
     public static let testPluginNameIRB = "IRB"
     public static let testPluginCommandIRB = "irb.rb"
-    public static let testPluginNameSharedTestResources = "SharedTestResources"
-    public static let testPluginNameSharedResources = "SharedResources"
     public static let testPluginNameCat = "Cat"
     public static let testPluginNameHelloWorld = "HelloWorld"
     public static let testPluginNameInvalid = "Invalid"
@@ -52,9 +50,7 @@ public class SodaTaster {
     // Private
     static let testRootPluginNames = [
         testPluginNameHTML,
-        testPluginNameIRB,
-        testPluginNameSharedTestResources,
-        testPluginNameSharedResources
+        testPluginNameIRB
     ]
     static let testSharedTestResourcesPluginNames = [
         testPluginNameCat,
@@ -66,7 +62,7 @@ public class SodaTaster {
     ]
     static let pluginResourcesPathComponent = "Contents/Resources"
     static let rootPluginsPathComponent = "Bundles"
-    static let sharedTestResourcesPluginDirectory = "plugin"
+    static let testPluginDirectory = "TestBundles"
 
     // Directories
 
@@ -80,14 +76,12 @@ public class SodaTaster {
 
     // Shared Test Resources Directories
 
-    public static var sharedTestResourcesPluginsDirectoryURL: URL {
-        let pluginURL = SodaTaster.urlForPlugin(withName: SodaTaster.testPluginNameSharedTestResources)!
-        return pluginURL
-            .appendingPathComponent(pluginResourcesPathComponent)
-            .appendingPathComponent(sharedTestResourcesPluginDirectory)
+    public static var testPluginsDirectoryURL: URL {
+        return rootPluginsDirectoryURL
+            .appendingPathComponent(testPluginDirectory)
     }
     public static var sharedTestResourcesPluginsDirectoryPath: String {
-        return sharedTestResourcesPluginsDirectoryURL.path
+        return testPluginsDirectoryURL.path
     }
 
     // Plugins
@@ -96,7 +90,7 @@ public class SodaTaster {
         return urlForPlugin(withName: name)?.path
     }
     public class func urlForPlugin(withName name: String) -> URL? {
-        let pluginsDirectoryURL = isSharedTestResourcesPluginName(name) ? sharedTestResourcesPluginsDirectoryURL
+        let pluginsDirectoryURL = isSharedTestResourcesPluginName(name) ? testPluginsDirectoryURL
             : rootPluginsDirectoryURL
         let pluginURL = pluginsDirectoryURL
             .appendingPathComponent(name)
