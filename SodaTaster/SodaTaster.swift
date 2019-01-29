@@ -62,7 +62,7 @@ public class SodaTaster {
     ]
     static let pluginResourcesPathComponent = "Contents/Resources"
     static let rootPluginsPathComponent = "Bundles"
-    static let testPluginDirectory = "TestBundles"
+    static let rootTestBundlePluginsPathComponent = "TestBundles"
 
     // Directories
 
@@ -76,12 +76,12 @@ public class SodaTaster {
 
     // Shared Test Resources Directories
 
-    public static var testPluginsDirectoryURL: URL {
-        return rootPluginsDirectoryURL
-            .appendingPathComponent(testPluginDirectory)
+    public static var testBundlePluginsDirectoryURL: URL {
+        return Bundle(for: SodaTaster.self).url(forResource: rootPluginsPathComponent,
+                                                withExtension: nil)!
     }
-    public static var sharedTestResourcesPluginsDirectoryPath: String {
-        return testPluginsDirectoryURL.path
+    public static var testBundlePluginsDirectoryPath: String {
+        return testBundlePluginsDirectoryURL.path
     }
 
     // Plugins

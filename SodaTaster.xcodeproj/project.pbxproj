@@ -12,6 +12,7 @@
 		4503CDF91ED7ADE200AB3B78 /* SodaTaster.h in Headers */ = {isa = PBXBuildFile; fileRef = 4503CDEB1ED7ADE200AB3B78 /* SodaTaster.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4503CE031ED7AE7F00AB3B78 /* SodaTaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503CE021ED7AE7F00AB3B78 /* SodaTaster.swift */; };
 		458AE1D42180EF1200C330E4 /* Bundles in Resources */ = {isa = PBXBuildFile; fileRef = 458AE1D22180EEE700C330E4 /* Bundles */; };
+		45F73E232200E96B00E98FEE /* TestBundles in Resources */ = {isa = PBXBuildFile; fileRef = 45F73E222200E96B00E98FEE /* TestBundles */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		4503CDF81ED7ADE200AB3B78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4503CE021ED7AE7F00AB3B78 /* SodaTaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SodaTaster.swift; sourceTree = "<group>"; };
 		458AE1D22180EEE700C330E4 /* Bundles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bundles; sourceTree = "<group>"; };
+		45F73E222200E96B00E98FEE /* TestBundles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestBundles; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		4503CDEA1ED7ADE200AB3B78 /* SodaTaster */ = {
 			isa = PBXGroup;
 			children = (
+				45F73E222200E96B00E98FEE /* TestBundles */,
 				458AE1D22180EEE700C330E4 /* Bundles */,
 				4503CDEB1ED7ADE200AB3B78 /* SodaTaster.h */,
 				4503CDEC1ED7ADE200AB3B78 /* Info.plist */,
@@ -194,6 +197,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45F73E232200E96B00E98FEE /* TestBundles in Resources */,
 				458AE1D42180EF1200C330E4 /* Bundles in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
