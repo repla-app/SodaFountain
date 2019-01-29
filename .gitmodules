@@ -4,9 +4,3 @@
 [submodule "PotionTaster/Plugins/HTML.wcplugin"]
 	path = SodaTaster/Bundles/HTML.wcplugin
 	url = https://github.com/repla-app/HTML.wcplugin.git
-[submodule "PotionTaster/Plugins/Shared-Test-Resources.wcplugin"]
-	path = SodaTaster/Bundles/SharedTestResources.wcplugin
-	url = https://github.com/repla-app/SharedTestResources.wcplugin.git
-[submodule "PotionTaster/Plugins/SharedResources.wcplugin"]
-	path = SodaTaster/Bundles/SharedResources.wcplugin
-	url = https://github.com/repla-app/SharedResources.wcplugin.git
