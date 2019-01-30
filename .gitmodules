@@ -6,4 +6,4 @@
 	url = https://github.com/repla-app/HTML.wcplugin.git
 [submodule "SodaTaster/TestAssets"]
 	path = SodaTaster/TestAssets
-	url = git@github.com:repla-app/TestAssets.git
+	url = https://github.com/repla-app/TestAssets.git
