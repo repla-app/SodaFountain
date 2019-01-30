@@ -13,6 +13,7 @@
 		454B3A6622022CF800633762 /* TestBundles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B3A6522022CF800633762 /* TestBundles.swift */; };
 		454B3A6822022D9200633762 /* TestAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B3A6722022D9200633762 /* TestAssets.swift */; };
 		454B3A6A22022FE500633762 /* TestAssets in Resources */ = {isa = PBXBuildFile; fileRef = 454B3A6922022FE500633762 /* TestAssets */; };
+		454B3A6C22023B5B00633762 /* TestAssetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B3A6B22023B5B00633762 /* TestAssetsTests.swift */; };
 		458AE1D42180EF1200C330E4 /* Bundles in Resources */ = {isa = PBXBuildFile; fileRef = 458AE1D22180EEE700C330E4 /* Bundles */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		454B3A6522022CF800633762 /* TestBundles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBundles.swift; sourceTree = "<group>"; };
 		454B3A6722022D9200633762 /* TestAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAssets.swift; sourceTree = "<group>"; };
 		454B3A6922022FE500633762 /* TestAssets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestAssets; sourceTree = "<group>"; };
+		454B3A6B22023B5B00633762 /* TestAssetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAssetsTests.swift; sourceTree = "<group>"; };
 		458AE1D22180EEE700C330E4 /* Bundles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bundles; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				4503CDF61ED7ADE200AB3B78 /* TestBundlesTests.swift */,
+				454B3A6B22023B5B00633762 /* TestAssetsTests.swift */,
 				4503CDF81ED7ADE200AB3B78 /* Info.plist */,
 			);
 			path = SodaTasterTests;
@@ -221,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				454B3A6C22023B5B00633762 /* TestAssetsTests.swift in Sources */,
 				4503CDF71ED7ADE200AB3B78 /* TestBundlesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
