@@ -9,10 +9,10 @@
 @testable import SodaTaster
 import XCTest
 
-class SodaTasterTests: XCTestCase {
+class TestBundlesTests: XCTestCase {
     func testPluginsDirectory() {
-        let path = SodaTaster.rootPluginsDirectoryPath
-        let url = SodaTaster.rootPluginsDirectoryURL
+        let path = TestBundles.rootPluginsDirectoryPath
+        let url = TestBundles.rootPluginsDirectoryURL
 
         guard let pathContents = try? FileManager.default.contentsOfDirectory(atPath: path) else {
             XCTFail()
@@ -29,16 +29,16 @@ class SodaTasterTests: XCTestCase {
         let urlContentsSet = Set(urlContents)
 
         XCTAssertEqual(pathContentsSet, urlContentsSet)
-        XCTAssertEqual(pathContentsSet, Set(SodaTaster.testRootPluginDirectoryNames))
+        XCTAssertEqual(pathContentsSet, Set(TestBundles.testRootPluginDirectoryNames))
     }
 
     func testPluginWithName() {
-        for name in SodaTaster.testPluginNames {
-            guard let url = SodaTaster.urlForPlugin(withName: name) else {
+        for name in TestBundles.testPluginNames {
+            guard let url = TestBundles.urlForPlugin(withName: name) else {
                 XCTFail()
                 return
             }
-            guard let path = SodaTaster.pathForPlugin(withName: name) else {
+            guard let path = TestBundles.pathForPlugin(withName: name) else {
                 XCTFail()
                 return
             }
@@ -54,7 +54,7 @@ class SodaTasterTests: XCTestCase {
     }
 
     func testNonexistantPlugin() {
-        XCTAssertNil(SodaTaster.urlForPlugin(withName: SodaTaster.testPluginNameNonexistent))
-        XCTAssertNil(SodaTaster.pathForPlugin(withName: SodaTaster.testPluginNameNonexistent))
+        XCTAssertNil(TestBundles.urlForPlugin(withName: TestBundles.testPluginNameNonexistent))
+        XCTAssertNil(TestBundles.pathForPlugin(withName: TestBundles.testPluginNameNonexistent))
     }
 }

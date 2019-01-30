@@ -1,23 +1,21 @@
 //
-//  SodaTaster.swift
+//  TestBundles.swift
 //  SodaTaster
 //
-//  Created by Roben Kleene on 5/25/17.
-//  Copyright © 2017 Roben Kleene. All rights reserved.
+//  Created by Roben Kleene on 1/30/19.
+//  Copyright © 2019 Roben Kleene. All rights reserved.
 //
 
 import Foundation
 
-public class SodaTaster {
-    // Public
+public class TestBundles {
+    // MARK: Public
 
     // Plugins
     public static let testPluginNameHTML = "HTML"
     public static let testPluginCommandHTML = "html.rb"
     public static let testPluginNameIRB = "IRB"
     public static let testPluginCommandIRB = "irb.rb"
-    public static let testPluginNameSharedTestResources = "SharedTestResources"
-    public static let testPluginNameSharedResources = "SharedResources"
     public static let testPluginNameCat = "Cat"
     public static let testPluginNameHelloWorld = "HelloWorld"
     public static let testPluginNameInvalid = "Invalid"
@@ -33,12 +31,12 @@ public class SodaTaster {
 
     // Collections
     static let testRootPluginDirectoryNames = testRootPluginNames.map { "\($0).\(testPluginFileExtension)" }
-    static let testSharedTestResourcesPluginDirectoryNames = testRootPluginNames.map {
+    static let testBundlePluginDirectoryNames = testRootPluginNames.map {
         "\($0).\(testPluginFileExtension)"
     }
-    public static let testPluginNames = testRootPluginNames + testSharedTestResourcesPluginNames
+    public static let testPluginNames = testRootPluginNames + testBundlePluginNames
     public static let testPluginDirectoryNames = testRootPluginDirectoryNames
-        + testSharedTestResourcesPluginDirectoryNames
+        + testBundlePluginDirectoryNames
 
     // Generic
     public static let testPluginName = testPluginNameHTML
@@ -49,14 +47,13 @@ public class SodaTaster {
     public static let testPluginDirectoryName = "\(testPluginName).\(testPluginFileExtension)"
     public static let testPluginDirectoryNameTwo = "\(testPluginNameTwo).\(testPluginFileExtension)"
 
-    // Private
+    // MARK: Private
+
     static let testRootPluginNames = [
         testPluginNameHTML,
-        testPluginNameIRB,
-        testPluginNameSharedTestResources,
-        testPluginNameSharedResources
+        testPluginNameIRB
     ]
-    static let testSharedTestResourcesPluginNames = [
+    static let testBundlePluginNames = [
         testPluginNameCat,
         testPluginNameHelloWorld,
         testPluginNameInvalid,
@@ -66,7 +63,7 @@ public class SodaTaster {
     ]
     static let pluginResourcesPathComponent = "Contents/Resources"
     static let rootPluginsPathComponent = "Bundles"
-    static let sharedTestResourcesPluginDirectory = "plugin"
+    static let rootTestBundlePluginsPathComponent = "TestAssets/Bundles"
 
     // Directories
 
@@ -74,20 +71,18 @@ public class SodaTaster {
         return rootPluginsDirectoryURL.path
     }
     public static var rootPluginsDirectoryURL: URL {
-        return Bundle(for: SodaTaster.self).url(forResource: rootPluginsPathComponent,
-                                                  withExtension: nil)!
+        return Bundle(for: TestBundles.self).url(forResource: rootPluginsPathComponent,
+                                                 withExtension: nil)!
     }
 
-    // Shared Test Resources Directories
+    // Test Bundles
 
-    public static var sharedTestResourcesPluginsDirectoryURL: URL {
-        let pluginURL = SodaTaster.urlForPlugin(withName: SodaTaster.testPluginNameSharedTestResources)!
-        return pluginURL
-            .appendingPathComponent(pluginResourcesPathComponent)
-            .appendingPathComponent(sharedTestResourcesPluginDirectory)
+    public static var rootTestBundlePluginsDirectoryURL: URL {
+        return Bundle(for: TestBundles.self).url(forResource: rootTestBundlePluginsPathComponent,
+                                                 withExtension: nil)!
     }
-    public static var sharedTestResourcesPluginsDirectoryPath: String {
-        return sharedTestResourcesPluginsDirectoryURL.path
+    public static var rootTestBundlePluginsDirectoryPath: String {
+        return rootTestBundlePluginsDirectoryURL.path
     }
 
     // Plugins
@@ -96,7 +91,7 @@ public class SodaTaster {
         return urlForPlugin(withName: name)?.path
     }
     public class func urlForPlugin(withName name: String) -> URL? {
-        let pluginsDirectoryURL = isSharedTestResourcesPluginName(name) ? sharedTestResourcesPluginsDirectoryURL
+        let pluginsDirectoryURL = isTestPluginName(name) ? rootTestBundlePluginsDirectoryURL
             : rootPluginsDirectoryURL
         let pluginURL = pluginsDirectoryURL
             .appendingPathComponent(name)
@@ -114,7 +109,7 @@ public class SodaTaster {
 
     // Helper
 
-    private class func isSharedTestResourcesPluginName(_ name: String) -> Bool {
-        return testSharedTestResourcesPluginNames.contains(name)
+    private class func isTestPluginName(_ name: String) -> Bool {
+        return testBundlePluginNames.contains(name)
     }
 }

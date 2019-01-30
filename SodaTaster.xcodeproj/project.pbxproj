@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		4503CDF21ED7ADE200AB3B78 /* SodaTaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4503CDE81ED7ADE200AB3B78 /* SodaTaster.framework */; };
-		4503CDF71ED7ADE200AB3B78 /* SodaTasterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503CDF61ED7ADE200AB3B78 /* SodaTasterTests.swift */; };
+		4503CDF71ED7ADE200AB3B78 /* TestBundlesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503CDF61ED7ADE200AB3B78 /* TestBundlesTests.swift */; };
 		4503CDF91ED7ADE200AB3B78 /* SodaTaster.h in Headers */ = {isa = PBXBuildFile; fileRef = 4503CDEB1ED7ADE200AB3B78 /* SodaTaster.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4503CE031ED7AE7F00AB3B78 /* SodaTaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503CE021ED7AE7F00AB3B78 /* SodaTaster.swift */; };
+		454B3A6622022CF800633762 /* TestBundles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B3A6522022CF800633762 /* TestBundles.swift */; };
+		454B3A6822022D9200633762 /* TestAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B3A6722022D9200633762 /* TestAssets.swift */; };
+		454B3A6A22022FE500633762 /* TestAssets in Resources */ = {isa = PBXBuildFile; fileRef = 454B3A6922022FE500633762 /* TestAssets */; };
+		454B3A6C22023B5B00633762 /* TestAssetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B3A6B22023B5B00633762 /* TestAssetsTests.swift */; };
 		458AE1D42180EF1200C330E4 /* Bundles in Resources */ = {isa = PBXBuildFile; fileRef = 458AE1D22180EEE700C330E4 /* Bundles */; };
 /* End PBXBuildFile section */
 
@@ -29,9 +32,12 @@
 		4503CDEB1ED7ADE200AB3B78 /* SodaTaster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SodaTaster.h; sourceTree = "<group>"; };
 		4503CDEC1ED7ADE200AB3B78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4503CDF11ED7ADE200AB3B78 /* SodaTasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SodaTasterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4503CDF61ED7ADE200AB3B78 /* SodaTasterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SodaTasterTests.swift; sourceTree = "<group>"; };
+		4503CDF61ED7ADE200AB3B78 /* TestBundlesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBundlesTests.swift; sourceTree = "<group>"; };
 		4503CDF81ED7ADE200AB3B78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4503CE021ED7AE7F00AB3B78 /* SodaTaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SodaTaster.swift; sourceTree = "<group>"; };
+		454B3A6522022CF800633762 /* TestBundles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBundles.swift; sourceTree = "<group>"; };
+		454B3A6722022D9200633762 /* TestAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAssets.swift; sourceTree = "<group>"; };
+		454B3A6922022FE500633762 /* TestAssets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestAssets; sourceTree = "<group>"; };
+		454B3A6B22023B5B00633762 /* TestAssetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAssetsTests.swift; sourceTree = "<group>"; };
 		458AE1D22180EEE700C330E4 /* Bundles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bundles; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,10 +81,12 @@
 		4503CDEA1ED7ADE200AB3B78 /* SodaTaster */ = {
 			isa = PBXGroup;
 			children = (
+				454B3A6922022FE500633762 /* TestAssets */,
 				458AE1D22180EEE700C330E4 /* Bundles */,
 				4503CDEB1ED7ADE200AB3B78 /* SodaTaster.h */,
 				4503CDEC1ED7ADE200AB3B78 /* Info.plist */,
-				4503CE021ED7AE7F00AB3B78 /* SodaTaster.swift */,
+				454B3A6522022CF800633762 /* TestBundles.swift */,
+				454B3A6722022D9200633762 /* TestAssets.swift */,
 			);
 			path = SodaTaster;
 			sourceTree = "<group>";
@@ -86,7 +94,8 @@
 		4503CDF51ED7ADE200AB3B78 /* SodaTasterTests */ = {
 			isa = PBXGroup;
 			children = (
-				4503CDF61ED7ADE200AB3B78 /* SodaTasterTests.swift */,
+				4503CDF61ED7ADE200AB3B78 /* TestBundlesTests.swift */,
+				454B3A6B22023B5B00633762 /* TestAssetsTests.swift */,
 				4503CDF81ED7ADE200AB3B78 /* Info.plist */,
 			);
 			path = SodaTasterTests;
@@ -195,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				458AE1D42180EF1200C330E4 /* Bundles in Resources */,
+				454B3A6A22022FE500633762 /* TestAssets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4503CE031ED7AE7F00AB3B78 /* SodaTaster.swift in Sources */,
+				454B3A6822022D9200633762 /* TestAssets.swift in Sources */,
+				454B3A6622022CF800633762 /* TestBundles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +224,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4503CDF71ED7ADE200AB3B78 /* SodaTasterTests.swift in Sources */,
+				454B3A6C22023B5B00633762 /* TestAssetsTests.swift in Sources */,
+				4503CDF71ED7ADE200AB3B78 /* TestBundlesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
