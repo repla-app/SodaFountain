@@ -70,14 +70,14 @@ public class TestBundles {
         return rootPluginsDirectoryURL.path
     }
     public static var rootPluginsDirectoryURL: URL {
-        return Bundle(for: SodaTaster.self).url(forResource: rootPluginsPathComponent,
+        return Bundle(for: TestBundles.self).url(forResource: rootPluginsPathComponent,
                                                 withExtension: nil)!
     }
     
     // Shared Test Resources Directories
     
     public static var rootTestBundlePluginsDirectoryURL: URL {
-        return Bundle(for: SodaTaster.self).url(forResource: rootTestBundlePluginsPathComponent,
+        return Bundle(for: TestBundles.self).url(forResource: rootTestBundlePluginsPathComponent,
                                                 withExtension: nil)!
     }
     public static var rootTestBundlePluginsDirectoryPath: String {
