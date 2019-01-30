@@ -20,6 +20,12 @@ public class TestAssets {
     // MARK: Public
     
     // Assets
+    public class var testTitleJavaScript: File {
+        return File(url: url(forResource: testTitleJavaScriptFilename,
+                             withExtension: testJavaScriptFileExtension,
+                             subdirectory: testJavaScriptPathComponent))
+    }
+
     public class var testHTMLJQUERY: File {
         return File(url: url(forResource: testHTMLJQUERYFilename,
                              withExtension: testHTMLFileExtension,
@@ -31,13 +37,18 @@ public class TestAssets {
                              withExtension: testHTMLFileExtension,
                              subdirectory: testHTMLPathComponent))
     }
-
+    static let assets = [
+        testTitleJavaScript,
+        testHTMLJQUERY,
+        testHTML
+    ]
     
     // MARK: Private
     
     // Assets
     private static let testHTMLJQUERYFilename = "indexjquery"
     private static let testHTMLFilename = "index"
+    private static let testTitleJavaScriptFilename = "title"
     private static let testJavaScriptFileExtension = "js"
     private static let testHTMLFileExtension = "html"
     private static let testAssetsPathComponent = "TestAssets"
