@@ -9,7 +9,7 @@
 @testable import SodaTaster
 import XCTest
 
-class SodaTasterTests: XCTestCase {
+class TestBundlesTests: XCTestCase {
     func testPluginsDirectory() {
         let path = SodaTaster.rootPluginsDirectoryPath
         let url = SodaTaster.rootPluginsDirectoryURL
