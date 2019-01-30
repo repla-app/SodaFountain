@@ -18,17 +18,29 @@ public class TestAssets {
     // MARK: Public
     
     // Assets
-    public var testHTMLJQUERY: File {
+    public class var testHTMLJQUERY: File {
         return File(url: URL(string: "")!, path: "")
     }
 
     // MARK: Private
+    
+    // Assets
+    private static let testHTMLJQUERYFilename = "indexjquery"
+    private static let testJavaScriptFileExtension = "js"
+    private static let testAssetsPathComponent = "TestAssets"
+    private static let testJavaScriptPathComponent = testAssetsPathComponent.appending("js")
+    
+    // MARK: Private
 
     func url(forResource name: String,
-             withExtension extension: String,
+             withExtension fileExtension: String,
              subdirectory: String) -> URL {
-        return URL(string: "")!
-        
+
+        guard let fileURL = Bundle(for: TestAssets.self).url(forResource: name, withExtension: fileExtension, subdirectory: subdirectory) else {
+            assert(false)
+            return URL(string: "")!
+        }
+        return fileURL
     }
 
 }
