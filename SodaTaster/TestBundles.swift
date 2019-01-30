@@ -9,8 +9,9 @@
 import Foundation
 
 public class TestBundles {
-    // Public
-    
+
+    // MARK: Public
+
     // Plugins
     public static let testPluginNameHTML = "HTML"
     public static let testPluginCommandHTML = "html.rb"
@@ -47,7 +48,8 @@ public class TestBundles {
     public static let testPluginDirectoryName = "\(testPluginName).\(testPluginFileExtension)"
     public static let testPluginDirectoryNameTwo = "\(testPluginNameTwo).\(testPluginFileExtension)"
     
-    // Private
+    // MARK: Private
+
     static let testRootPluginNames = [
         testPluginNameHTML,
         testPluginNameIRB
@@ -74,7 +76,7 @@ public class TestBundles {
                                                 withExtension: nil)!
     }
     
-    // Shared Test Resources Directories
+    // Test Bundles
     
     public static var rootTestBundlePluginsDirectoryURL: URL {
         return Bundle(for: TestBundles.self).url(forResource: rootTestBundlePluginsPathComponent,
