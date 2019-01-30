@@ -9,7 +9,6 @@
 import Foundation
 
 public class TestBundles {
-
     // MARK: Public
 
     // Plugins
@@ -23,13 +22,13 @@ public class TestBundles {
     public static let testPluginNamePrint = "Print"
     public static let testPluginNameTestEnvironment = "TestEnvironment"
     public static let testPluginNameTestLog = "TestLog"
-    
+
     // Special
     public static let testPluginNameNonexistent = "Nonexistent"
-    
+
     // Metadata
     public static let testPluginFileExtension = "wcplugin"
-    
+
     // Collections
     static let testRootPluginDirectoryNames = testRootPluginNames.map { "\($0).\(testPluginFileExtension)" }
     static let testBundlePluginDirectoryNames = testRootPluginNames.map {
@@ -38,7 +37,7 @@ public class TestBundles {
     public static let testPluginNames = testRootPluginNames + testBundlePluginNames
     public static let testPluginDirectoryNames = testRootPluginDirectoryNames
         + testBundlePluginDirectoryNames
-    
+
     // Generic
     public static let testPluginName = testPluginNameHTML
     public static let testPluginNameTwo = testPluginNameIRB
@@ -47,7 +46,7 @@ public class TestBundles {
     public static let testPluginNameNoPlugin = "Not a Plugin Name"
     public static let testPluginDirectoryName = "\(testPluginName).\(testPluginFileExtension)"
     public static let testPluginDirectoryNameTwo = "\(testPluginNameTwo).\(testPluginFileExtension)"
-    
+
     // MARK: Private
 
     static let testRootPluginNames = [
@@ -65,29 +64,29 @@ public class TestBundles {
     static let pluginResourcesPathComponent = "Contents/Resources"
     static let rootPluginsPathComponent = "Bundles"
     static let rootTestBundlePluginsPathComponent = "TestAssets/Bundles"
-    
+
     // Directories
-    
+
     public static var rootPluginsDirectoryPath: String {
         return rootPluginsDirectoryURL.path
     }
     public static var rootPluginsDirectoryURL: URL {
         return Bundle(for: TestBundles.self).url(forResource: rootPluginsPathComponent,
-                                                withExtension: nil)!
+                                                 withExtension: nil)!
     }
-    
+
     // Test Bundles
-    
+
     public static var rootTestBundlePluginsDirectoryURL: URL {
         return Bundle(for: TestBundles.self).url(forResource: rootTestBundlePluginsPathComponent,
-                                                withExtension: nil)!
+                                                 withExtension: nil)!
     }
     public static var rootTestBundlePluginsDirectoryPath: String {
         return rootTestBundlePluginsDirectoryURL.path
     }
-    
+
     // Plugins
-    
+
     public class func pathForPlugin(withName name: String) -> String? {
         return urlForPlugin(withName: name)?.path
     }
@@ -98,18 +97,18 @@ public class TestBundles {
             .appendingPathComponent(name)
             .appendingPathExtension(testPluginFileExtension)
         var isDir: ObjCBool = false
-        
+
         guard
             FileManager.default.fileExists(atPath: pluginURL.path,
                                            isDirectory: &isDir),
             isDir.boolValue else {
-                return nil
+            return nil
         }
         return pluginURL
     }
-    
+
     // Helper
-    
+
     private class func isTestPluginName(_ name: String) -> Bool {
         return testBundlePluginNames.contains(name)
     }

@@ -9,16 +9,15 @@
 import Foundation
 
 public class TestAssets {
-
     public struct File {
         public let url: URL
         public var path: String {
             return url.path
         }
     }
-    
+
     // MARK: Public
-    
+
     // Assets
     public static let testTitleJavaScript = File(url: url(forResource: testTitleJavaScriptFilename,
                                                           withExtension: testJavaScriptFileExtension,
@@ -34,9 +33,9 @@ public class TestAssets {
         testHTMLJQUERY,
         testHTML
     ]
-    
+
     // MARK: Private
-    
+
     // Assets
     private static let testHTMLJQUERYFilename = "indexjquery"
     private static let testHTMLFilename = "index"
@@ -59,5 +58,4 @@ public class TestAssets {
         }
         return fileURL
     }
-
 }
