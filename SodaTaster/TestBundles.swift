@@ -62,7 +62,7 @@ public class TestBundles {
     ]
     static let pluginResourcesPathComponent = "Contents/Resources"
     static let rootPluginsPathComponent = "Bundles"
-    static let rootTestBundlePluginsPathComponent = "TestBundles"
+    static let rootTestBundlePluginsPathComponent = "TestAssets/Bundles"
     
     // Directories
     

@@ -12,6 +12,7 @@
 		4503CDF91ED7ADE200AB3B78 /* SodaTaster.h in Headers */ = {isa = PBXBuildFile; fileRef = 4503CDEB1ED7ADE200AB3B78 /* SodaTaster.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		454B3A6622022CF800633762 /* TestBundles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B3A6522022CF800633762 /* TestBundles.swift */; };
 		454B3A6822022D9200633762 /* TestAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B3A6722022D9200633762 /* TestAssets.swift */; };
+		454B3A6A22022FE500633762 /* TestAssets in Resources */ = {isa = PBXBuildFile; fileRef = 454B3A6922022FE500633762 /* TestAssets */; };
 		458AE1D42180EF1200C330E4 /* Bundles in Resources */ = {isa = PBXBuildFile; fileRef = 458AE1D22180EEE700C330E4 /* Bundles */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		4503CDF81ED7ADE200AB3B78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		454B3A6522022CF800633762 /* TestBundles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBundles.swift; sourceTree = "<group>"; };
 		454B3A6722022D9200633762 /* TestAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAssets.swift; sourceTree = "<group>"; };
+		454B3A6922022FE500633762 /* TestAssets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestAssets; sourceTree = "<group>"; };
 		458AE1D22180EEE700C330E4 /* Bundles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bundles; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +79,7 @@
 		4503CDEA1ED7ADE200AB3B78 /* SodaTaster */ = {
 			isa = PBXGroup;
 			children = (
+				454B3A6922022FE500633762 /* TestAssets */,
 				458AE1D22180EEE700C330E4 /* Bundles */,
 				4503CDEB1ED7ADE200AB3B78 /* SodaTaster.h */,
 				4503CDEC1ED7ADE200AB3B78 /* Info.plist */,
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				458AE1D42180EF1200C330E4 /* Bundles in Resources */,
+				454B3A6A22022FE500633762 /* TestAssets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
