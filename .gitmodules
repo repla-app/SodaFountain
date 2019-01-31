@@ -4,6 +4,3 @@
 [submodule "SodaTaster/Bundles/HTML.wcplugin"]
 	path = SodaTaster/Bundles/HTML.wcplugin
 	url = https://github.com/repla-app/HTML.wcplugin.git
-[submodule "SodaTaster/TestAssets"]
-	path = SodaTaster/TestAssets
-	url = https://github.com/repla-app/TestAssets.git
