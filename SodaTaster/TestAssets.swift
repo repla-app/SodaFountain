@@ -42,7 +42,7 @@ public class TestAssets {
     private static let testTitleJavaScriptFilename = "title"
     private static let testJavaScriptFileExtension = "js"
     private static let testHTMLFileExtension = "html"
-    private static let testAssetsPathComponent = "TestAssets"
+    private static let testAssetsPathComponent = "resources"
     private static let testJavaScriptPathComponent = testAssetsPathComponent.appending("/js")
     private static let testHTMLPathComponent = testAssetsPathComponent.appending("/html")
 
