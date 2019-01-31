@@ -1,0 +1,3 @@
+[submodule "SodaTaster/Assets/repla-ruby"]
+	path = SodaTaster/Assets/repla-ruby
+	url = git@github.com:repla-app/repla-ruby.git
