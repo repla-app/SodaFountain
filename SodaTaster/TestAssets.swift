@@ -42,9 +42,8 @@ public class TestAssets {
     private static let testTitleJavaScriptFilename = "title"
     private static let testJavaScriptFileExtension = "js"
     private static let testHTMLFileExtension = "html"
-    private static let testAssetsPathComponent = "resources"
-    private static let testJavaScriptPathComponent = testAssetsPathComponent.appending("/js")
-    private static let testHTMLPathComponent = testAssetsPathComponent.appending("/html")
+    private static let testJavaScriptPathComponent = "js"
+    private static let testHTMLPathComponent = "html"
 
     // Helper
     private static func url(forResource name: String,

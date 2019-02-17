@@ -25,7 +25,7 @@ public class TestBundles {
     public static let testPluginNameNonexistent = "Nonexistent"
 
     // Metadata
-    public static let testPluginFileExtension = "wcplugin"
+    public static let testPluginFileExtension = "replabundle"
 
     // Collections
     public static let testPluginDirectoryNames = testPluginNames.map {
@@ -51,7 +51,7 @@ public class TestBundles {
         testPluginNameTestEnvironment,
         testPluginNameTestLog
     ]
-    static let rootTestBundlePluginsPathComponent = "resources/bundles"
+    static let rootTestBundlePluginsPathComponent = "bundles"
 
     // Directories
 
@@ -59,6 +59,7 @@ public class TestBundles {
         return Bundle(for: TestBundles.self).url(forResource: rootTestBundlePluginsPathComponent,
                                                  withExtension: nil)!
     }
+
     public static var testPluginsDirectoryPath: String {
         return testPluginsDirectoryURL.path
     }
@@ -68,6 +69,7 @@ public class TestBundles {
     public class func pathForPlugin(withName name: String) -> String? {
         return urlForPlugin(withName: name)?.path
     }
+
     public class func urlForPlugin(withName name: String) -> URL? {
         let pluginURL = testPluginsDirectoryURL
             .appendingPathComponent(name)
