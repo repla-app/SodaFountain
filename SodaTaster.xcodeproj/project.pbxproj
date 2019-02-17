@@ -13,9 +13,8 @@
 		454B3A6622022CF800633762 /* TestBundles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B3A6522022CF800633762 /* TestBundles.swift */; };
 		454B3A6822022D9200633762 /* TestAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B3A6722022D9200633762 /* TestAssets.swift */; };
 		454B3A6C22023B5B00633762 /* TestAssetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B3A6B22023B5B00633762 /* TestAssetsTests.swift */; };
-		45B9B5CB2219F39700380BC6 /* html in Resources */ = {isa = PBXBuildFile; fileRef = 45B9B5CA2219F39700380BC6 /* html */; };
-		45B9B5CD2219F3AE00380BC6 /* bundles in Resources */ = {isa = PBXBuildFile; fileRef = 45B9B5CC2219F3AE00380BC6 /* bundles */; };
-		45B9B5CF2219F3CC00380BC6 /* js in Resources */ = {isa = PBXBuildFile; fileRef = 45B9B5CE2219F3CC00380BC6 /* js */; };
+		459194362219FDCD00EC3179 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 459194352219FDCD00EC3179 /* Assets */; };
+		459194382219FE2100EC3179 /* AssetSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459194372219FE2100EC3179 /* AssetSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +37,8 @@
 		454B3A6522022CF800633762 /* TestBundles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBundles.swift; sourceTree = "<group>"; };
 		454B3A6722022D9200633762 /* TestAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAssets.swift; sourceTree = "<group>"; };
 		454B3A6B22023B5B00633762 /* TestAssetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAssetsTests.swift; sourceTree = "<group>"; };
-		45B9B5CA2219F39700380BC6 /* html */ = {isa = PBXFileReference; lastKnownFileType = folder; name = html; path = "SodaTaster/Assets/repla-ruby/lib/repla/test/html"; sourceTree = SOURCE_ROOT; };
-		45B9B5CC2219F3AE00380BC6 /* bundles */ = {isa = PBXFileReference; lastKnownFileType = folder; name = bundles; path = "SodaTaster/Assets/repla-ruby/lib/repla/test/bundles"; sourceTree = SOURCE_ROOT; };
-		45B9B5CE2219F3CC00380BC6 /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; name = js; path = "SodaTaster/Assets/repla-ruby/lib/repla/test/js"; sourceTree = SOURCE_ROOT; };
+		459194352219FDCD00EC3179 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
+		459194372219FE2100EC3179 /* AssetSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,10 +81,11 @@
 		4503CDEA1ED7ADE200AB3B78 /* SodaTaster */ = {
 			isa = PBXGroup;
 			children = (
-				45B9B5C52219F33900380BC6 /* Resources */,
+				459194352219FDCD00EC3179 /* Assets */,
 				4503CDEB1ED7ADE200AB3B78 /* SodaTaster.h */,
 				4503CDEC1ED7ADE200AB3B78 /* Info.plist */,
 				454B3A6522022CF800633762 /* TestBundles.swift */,
+				459194372219FE2100EC3179 /* AssetSource.swift */,
 				454B3A6722022D9200633762 /* TestAssets.swift */,
 			);
 			path = SodaTaster;
@@ -100,16 +99,6 @@
 				4503CDF81ED7ADE200AB3B78 /* Info.plist */,
 			);
 			path = SodaTasterTests;
-			sourceTree = "<group>";
-		};
-		45B9B5C52219F33900380BC6 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				45B9B5CE2219F3CC00380BC6 /* js */,
-				45B9B5CC2219F3AE00380BC6 /* bundles */,
-				45B9B5CA2219F39700380BC6 /* html */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,9 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45B9B5CD2219F3AE00380BC6 /* bundles in Resources */,
-				45B9B5CF2219F3CC00380BC6 /* js in Resources */,
-				45B9B5CB2219F39700380BC6 /* html in Resources */,
+				459194362219FDCD00EC3179 /* Assets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +216,7 @@
 			files = (
 				454B3A6822022D9200633762 /* TestAssets.swift in Sources */,
 				454B3A6622022CF800633762 /* TestBundles.swift in Sources */,
+				459194382219FE2100EC3179 /* AssetSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

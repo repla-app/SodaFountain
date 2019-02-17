@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class TestBundles {
+public class TestBundles: AssetSource {
     // MARK: Public
 
     // Plugins
@@ -51,7 +51,7 @@ public class TestBundles {
         testPluginNameTestEnvironment,
         testPluginNameTestLog
     ]
-    static let rootTestBundlePluginsPathComponent = "bundles"
+    static let rootTestBundlePluginsPathComponent = assetPathcomponent.appending("bundles")
 
     // Directories
 
