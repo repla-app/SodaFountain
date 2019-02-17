@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class TestAssets {
+public class TestAssets: AssetSource {
     public struct File {
         public let url: URL
         public var path: String {
@@ -42,8 +42,8 @@ public class TestAssets {
     private static let testTitleJavaScriptFilename = "title"
     private static let testJavaScriptFileExtension = "js"
     private static let testHTMLFileExtension = "html"
-    private static let testJavaScriptPathComponent = "js"
-    private static let testHTMLPathComponent = "html"
+    private static let testJavaScriptPathComponent = assetPathcomponent.appending("js")
+    private static let testHTMLPathComponent = assetPathcomponent.appending("html")
 
     // Helper
     private static func url(forResource name: String,
