@@ -13,7 +13,9 @@
 		454B3A6622022CF800633762 /* TestBundles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B3A6522022CF800633762 /* TestBundles.swift */; };
 		454B3A6822022D9200633762 /* TestAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B3A6722022D9200633762 /* TestAssets.swift */; };
 		454B3A6C22023B5B00633762 /* TestAssetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B3A6B22023B5B00633762 /* TestAssetsTests.swift */; };
-		454B3A6E22039BDA00633762 /* resources in Resources */ = {isa = PBXBuildFile; fileRef = 454B3A6D22039BDA00633762 /* resources */; };
+		45B9B5CB2219F39700380BC6 /* html in Resources */ = {isa = PBXBuildFile; fileRef = 45B9B5CA2219F39700380BC6 /* html */; };
+		45B9B5CD2219F3AE00380BC6 /* bundles in Resources */ = {isa = PBXBuildFile; fileRef = 45B9B5CC2219F3AE00380BC6 /* bundles */; };
+		45B9B5CF2219F3CC00380BC6 /* js in Resources */ = {isa = PBXBuildFile; fileRef = 45B9B5CE2219F3CC00380BC6 /* js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,9 @@
 		454B3A6522022CF800633762 /* TestBundles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBundles.swift; sourceTree = "<group>"; };
 		454B3A6722022D9200633762 /* TestAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAssets.swift; sourceTree = "<group>"; };
 		454B3A6B22023B5B00633762 /* TestAssetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAssetsTests.swift; sourceTree = "<group>"; };
-		454B3A6D22039BDA00633762 /* resources */ = {isa = PBXFileReference; lastKnownFileType = folder; name = resources; path = "Assets/repla-ruby/test/resources"; sourceTree = "<group>"; };
+		45B9B5CA2219F39700380BC6 /* html */ = {isa = PBXFileReference; lastKnownFileType = folder; name = html; path = "SodaTaster/Assets/repla-ruby/lib/repla/test/html"; sourceTree = SOURCE_ROOT; };
+		45B9B5CC2219F3AE00380BC6 /* bundles */ = {isa = PBXFileReference; lastKnownFileType = folder; name = bundles; path = "SodaTaster/Assets/repla-ruby/lib/repla/test/bundles"; sourceTree = SOURCE_ROOT; };
+		45B9B5CE2219F3CC00380BC6 /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; name = js; path = "SodaTaster/Assets/repla-ruby/lib/repla/test/js"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +83,7 @@
 		4503CDEA1ED7ADE200AB3B78 /* SodaTaster */ = {
 			isa = PBXGroup;
 			children = (
-				454B3A6D22039BDA00633762 /* resources */,
+				45B9B5C52219F33900380BC6 /* Resources */,
 				4503CDEB1ED7ADE200AB3B78 /* SodaTaster.h */,
 				4503CDEC1ED7ADE200AB3B78 /* Info.plist */,
 				454B3A6522022CF800633762 /* TestBundles.swift */,
@@ -96,6 +100,16 @@
 				4503CDF81ED7ADE200AB3B78 /* Info.plist */,
 			);
 			path = SodaTasterTests;
+			sourceTree = "<group>";
+		};
+		45B9B5C52219F33900380BC6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				45B9B5CE2219F3CC00380BC6 /* js */,
+				45B9B5CC2219F3AE00380BC6 /* bundles */,
+				45B9B5CA2219F39700380BC6 /* html */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +214,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				454B3A6E22039BDA00633762 /* resources in Resources */,
+				45B9B5CD2219F3AE00380BC6 /* bundles in Resources */,
+				45B9B5CF2219F3CC00380BC6 /* js in Resources */,
+				45B9B5CB2219F39700380BC6 /* html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
