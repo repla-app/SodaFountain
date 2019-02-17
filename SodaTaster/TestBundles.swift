@@ -51,7 +51,7 @@ public class TestBundles {
         testPluginNameTestEnvironment,
         testPluginNameTestLog
     ]
-    static let rootTestBundlePluginsPathComponent = "resources/bundles"
+    static let rootTestBundlePluginsPathComponent = "bundles"
 
     // Directories
 
