@@ -25,7 +25,7 @@ public class TestBundles {
     public static let testPluginNameNonexistent = "Nonexistent"
 
     // Metadata
-    public static let testPluginFileExtension = "wcplugin"
+    public static let testPluginFileExtension = "replabundle"
 
     // Collections
     public static let testPluginDirectoryNames = testPluginNames.map {
