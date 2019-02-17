@@ -59,6 +59,7 @@ public class TestBundles {
         return Bundle(for: TestBundles.self).url(forResource: rootTestBundlePluginsPathComponent,
                                                  withExtension: nil)!
     }
+
     public static var testPluginsDirectoryPath: String {
         return testPluginsDirectoryURL.path
     }
@@ -68,6 +69,7 @@ public class TestBundles {
     public class func pathForPlugin(withName name: String) -> String? {
         return urlForPlugin(withName: name)?.path
     }
+
     public class func urlForPlugin(withName name: String) -> URL? {
         let pluginURL = testPluginsDirectoryURL
             .appendingPathComponent(name)
