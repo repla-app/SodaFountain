@@ -11,8 +11,8 @@ import XCTest
 
 class TestBundlesTests: XCTestCase {
     func testPluginsDirectory() {
-        let path = TestBundles.rootPluginsDirectoryPath
-        let url = TestBundles.rootPluginsDirectoryURL
+        let path = TestBundles.testPluginsDirectoryPath
+        let url = TestBundles.testPluginsDirectoryURL
 
         guard let pathContents = try? FileManager.default.contentsOfDirectory(atPath: path) else {
             XCTFail()
@@ -29,7 +29,7 @@ class TestBundlesTests: XCTestCase {
         let urlContentsSet = Set(urlContents)
 
         XCTAssertEqual(pathContentsSet, urlContentsSet)
-        XCTAssertEqual(pathContentsSet, Set(TestBundles.testRootPluginDirectoryNames))
+        XCTAssertEqual(pathContentsSet, Set(TestBundles.testPluginDirectoryNames))
     }
 
     func testPluginWithName() {

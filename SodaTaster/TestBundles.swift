@@ -12,14 +12,12 @@ public class TestBundles {
     // MARK: Public
 
     // Plugins
-    public static let testPluginNameHTML = "HTML"
-    public static let testPluginCommandHTML = "html.rb"
-    public static let testPluginNameIRB = "IRB"
-    public static let testPluginCommandIRB = "irb.rb"
     public static let testPluginNameCat = "Cat"
+    public static let testPluginCommandCat = "cat.sh"
     public static let testPluginNameHelloWorld = "HelloWorld"
     public static let testPluginNameInvalid = "Invalid"
     public static let testPluginNamePrint = "Print"
+    public static let testPluginCommandPrint = "print.rb"
     public static let testPluginNameTestEnvironment = "TestEnvironment"
     public static let testPluginNameTestLog = "TestLog"
 
@@ -30,30 +28,22 @@ public class TestBundles {
     public static let testPluginFileExtension = "wcplugin"
 
     // Collections
-    static let testRootPluginDirectoryNames = testRootPluginNames.map { "\($0).\(testPluginFileExtension)" }
-    static let testBundlePluginDirectoryNames = testRootPluginNames.map {
+    public static let testPluginDirectoryNames = testPluginNames.map {
         "\($0).\(testPluginFileExtension)"
     }
-    public static let testPluginNames = testRootPluginNames + testBundlePluginNames
-    public static let testPluginDirectoryNames = testRootPluginDirectoryNames
-        + testBundlePluginDirectoryNames
 
     // Generic
-    public static let testPluginName = testPluginNameHTML
-    public static let testPluginNameTwo = testPluginNameIRB
-    public static let testPluginCommand = testPluginCommandHTML
-    public static let testPluginCommandTwo = testPluginCommandIRB
+    public static let testPluginName = testPluginNameCat
+    public static let testPluginNameTwo = testPluginNamePrint
+    public static let testPluginCommand = testPluginCommandCat
+    public static let testPluginCommandTwo = testPluginCommandPrint
     public static let testPluginNameNoPlugin = "Not a Plugin Name"
     public static let testPluginDirectoryName = "\(testPluginName).\(testPluginFileExtension)"
     public static let testPluginDirectoryNameTwo = "\(testPluginNameTwo).\(testPluginFileExtension)"
 
     // MARK: Private
 
-    static let testRootPluginNames = [
-        testPluginNameHTML,
-        testPluginNameIRB
-    ]
-    static let testBundlePluginNames = [
+    static let testPluginNames = [
         testPluginNameCat,
         testPluginNameHelloWorld,
         testPluginNameInvalid,
@@ -61,28 +51,16 @@ public class TestBundles {
         testPluginNameTestEnvironment,
         testPluginNameTestLog
     ]
-    static let pluginResourcesPathComponent = "Contents/Resources"
-    static let rootPluginsPathComponent = "Bundles"
-    static let rootTestBundlePluginsPathComponent = "TestAssets/Bundles"
+    static let rootTestBundlePluginsPathComponent = "resources/bundles"
 
     // Directories
 
-    public static var rootPluginsDirectoryPath: String {
-        return rootPluginsDirectoryURL.path
-    }
-    public static var rootPluginsDirectoryURL: URL {
-        return Bundle(for: TestBundles.self).url(forResource: rootPluginsPathComponent,
-                                                 withExtension: nil)!
-    }
-
-    // Test Bundles
-
-    public static var rootTestBundlePluginsDirectoryURL: URL {
+    public static var testPluginsDirectoryURL: URL {
         return Bundle(for: TestBundles.self).url(forResource: rootTestBundlePluginsPathComponent,
                                                  withExtension: nil)!
     }
-    public static var rootTestBundlePluginsDirectoryPath: String {
-        return rootTestBundlePluginsDirectoryURL.path
+    public static var testPluginsDirectoryPath: String {
+        return testPluginsDirectoryURL.path
     }
 
     // Plugins
@@ -91,9 +69,7 @@ public class TestBundles {
         return urlForPlugin(withName: name)?.path
     }
     public class func urlForPlugin(withName name: String) -> URL? {
-        let pluginsDirectoryURL = isTestPluginName(name) ? rootTestBundlePluginsDirectoryURL
-            : rootPluginsDirectoryURL
-        let pluginURL = pluginsDirectoryURL
+        let pluginURL = testPluginsDirectoryURL
             .appendingPathComponent(name)
             .appendingPathExtension(testPluginFileExtension)
         var isDir: ObjCBool = false
@@ -110,6 +86,6 @@ public class TestBundles {
     // Helper
 
     private class func isTestPluginName(_ name: String) -> Bool {
-        return testBundlePluginNames.contains(name)
+        return testPluginNames.contains(name)
     }
 }
