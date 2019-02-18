@@ -20,6 +20,7 @@ public class TestBundles: AssetSource {
     public static let testPluginCommandPrint = "print.rb"
     public static let testPluginNameTestEnvironment = "TestEnvironment"
     public static let testPluginNameTestLog = "TestLog"
+    public static let testPluginNameTestFileExtension = "FileExtension"
 
     // Special
     public static let testPluginNameNonexistent = "Nonexistent"
@@ -49,6 +50,7 @@ public class TestBundles: AssetSource {
         testPluginNameInvalid,
         testPluginNamePrint,
         testPluginNameTestEnvironment,
+        testPluginNameTestFileExtension,
         testPluginNameTestLog
     ]
     static let rootTestBundlePluginsPathComponent = assetPathcomponent.appending("bundles")
