@@ -28,8 +28,12 @@ public class TestAssets: AssetSource {
     public static let testHTML = File(url: url(forResource: testHTMLFilename,
                                                withExtension: testHTMLFileExtension,
                                                subdirectory: testHTMLPathComponent))
+    public static let testTextJQUERYJavaScript = File(url: url(forResource: testTextJQUERYJavaScriptFilename,
+                                                               withExtension: testJavaScriptFileExtension,
+                                                               subdirectory: testJavaScriptPathComponent))
     static let assets = [
         testTitleJavaScript,
+        testTextJQUERYJavaScript,
         testHTMLJQUERY,
         testHTML
     ]
@@ -38,6 +42,7 @@ public class TestAssets: AssetSource {
 
     // Assets
     private static let testHTMLJQUERYFilename = "indexjquery"
+    private static let testTextJQUERYJavaScriptFilename = "textjquery"
     private static let testHTMLFilename = "index"
     private static let testTitleJavaScriptFilename = "title"
     private static let testJavaScriptFileExtension = "js"
