@@ -21,7 +21,8 @@ public class TestBundles: AssetSource {
     public static let testPluginNameTestEnvironment = "TestEnvironment"
     public static let testPluginNameTestLog = "TestLog"
     public static let testPluginNameTestFileExtension = "FileExtension"
-
+    public static let testPluginNameTestPromptInterrupt = "PromptInterrupt"
+    
     // Special
     public static let testPluginNameNonexistent = "Nonexistent"
 
@@ -51,6 +52,7 @@ public class TestBundles: AssetSource {
         testPluginNamePrint,
         testPluginNameTestEnvironment,
         testPluginNameTestFileExtension,
+        testPluginNameTestPromptInterrupt,
         testPluginNameTestLog
     ]
     static let rootTestBundlePluginsPathComponent = assetPathcomponent.appending("bundles")
