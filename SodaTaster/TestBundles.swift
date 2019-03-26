@@ -47,7 +47,6 @@ public class TestBundles: AssetSource {
     public static let testPluginOptionsDisabledName = testPluginNameTestLog
     public static let testPluginOptionsNilName = testPluginCommandPrint
 
-    
     // MARK: Private
 
     static let testPluginNames = [
