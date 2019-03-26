@@ -43,6 +43,9 @@ public class TestBundles: AssetSource {
     public static let testPluginNameNoPlugin = "Not a Plugin Name"
     public static let testPluginDirectoryName = "\(testPluginName).\(testPluginFileExtension)"
     public static let testPluginDirectoryNameTwo = "\(testPluginNameTwo).\(testPluginFileExtension)"
+    public static let testPluginOptionsEnabledName = testPluginNameHelloWorld
+    public static let testPluginOptionsDisabledName = testPluginNameTestLog
+    public static let testPluginOptionsNilName = testPluginCommandPrint
 
     // MARK: Private
 
