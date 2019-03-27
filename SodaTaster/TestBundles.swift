@@ -45,7 +45,7 @@ public class TestBundles: AssetSource {
     public static let testPluginDirectoryNameTwo = "\(testPluginNameTwo).\(testPluginFileExtension)"
     public static let testPluginOptionsEnabledName = testPluginNameHelloWorld
     public static let testPluginOptionsDisabledName = testPluginNameTestLog
-    public static let testPluginOptionsNilName = testPluginCommandPrint
+    public static let testPluginOptionsNilName = testPluginNamePrint
 
     // MARK: Private
 
