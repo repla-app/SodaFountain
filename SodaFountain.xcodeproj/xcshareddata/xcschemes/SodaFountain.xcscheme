@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4503CDE71ED7ADE200AB3B78"
-               BuildableName = "SodaTaster.framework"
-               BlueprintName = "SodaTaster"
-               ReferencedContainer = "container:SodaTaster.xcodeproj">
+               BuildableName = "SodaFountain.framework"
+               BlueprintName = "SodaFountain"
+               ReferencedContainer = "container:SodaFountain.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4503CDF01ED7ADE200AB3B78"
-               BuildableName = "SodaTasterTests.xctest"
-               BlueprintName = "SodaTasterTests"
-               ReferencedContainer = "container:SodaTaster.xcodeproj">
+               BuildableName = "SodaFountainTests.xctest"
+               BlueprintName = "SodaFountainTests"
+               ReferencedContainer = "container:SodaFountain.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4503CDE71ED7ADE200AB3B78"
-            BuildableName = "SodaTaster.framework"
-            BlueprintName = "SodaTaster"
-            ReferencedContainer = "container:SodaTaster.xcodeproj">
+            BuildableName = "SodaFountain.framework"
+            BlueprintName = "SodaFountain"
+            ReferencedContainer = "container:SodaFountain.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4503CDE71ED7ADE200AB3B78"
-            BuildableName = "SodaTaster.framework"
-            BlueprintName = "SodaTaster"
-            ReferencedContainer = "container:SodaTaster.xcodeproj">
+            BuildableName = "SodaFountain.framework"
+            BlueprintName = "SodaFountain"
+            ReferencedContainer = "container:SodaFountain.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,9 +83,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4503CDE71ED7ADE200AB3B78"
-            BuildableName = "SodaTaster.framework"
-            BlueprintName = "SodaTaster"
-            ReferencedContainer = "container:SodaTaster.xcodeproj">
+            BuildableName = "SodaFountain.framework"
+            BlueprintName = "SodaFountain"
+            ReferencedContainer = "container:SodaFountain.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
