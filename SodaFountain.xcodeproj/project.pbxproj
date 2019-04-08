@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4503CDF21ED7ADE200AB3B78 /* SodaTaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4503CDE81ED7ADE200AB3B78 /* SodaTaster.framework */; };
+		4503CDF21ED7ADE200AB3B78 /* SodaFountain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4503CDE81ED7ADE200AB3B78 /* SodaFountain.framework */; };
 		4503CDF71ED7ADE200AB3B78 /* TestBundlesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503CDF61ED7ADE200AB3B78 /* TestBundlesTests.swift */; };
-		4503CDF91ED7ADE200AB3B78 /* SodaTaster.h in Headers */ = {isa = PBXBuildFile; fileRef = 4503CDEB1ED7ADE200AB3B78 /* SodaTaster.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4503CDF91ED7ADE200AB3B78 /* SodaFountain.h in Headers */ = {isa = PBXBuildFile; fileRef = 4503CDEB1ED7ADE200AB3B78 /* SodaFountain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		454B3A6622022CF800633762 /* TestBundles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B3A6522022CF800633762 /* TestBundles.swift */; };
 		454B3A6822022D9200633762 /* TestAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B3A6722022D9200633762 /* TestAssets.swift */; };
 		454B3A6C22023B5B00633762 /* TestAssetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B3A6B22023B5B00633762 /* TestAssetsTests.swift */; };
@@ -23,15 +23,15 @@
 			containerPortal = 4503CDDF1ED7ADE200AB3B78 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4503CDE71ED7ADE200AB3B78;
-			remoteInfo = SodaTaster;
+			remoteInfo = SodaFountain;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4503CDE81ED7ADE200AB3B78 /* SodaTaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SodaTaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4503CDEB1ED7ADE200AB3B78 /* SodaTaster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SodaTaster.h; sourceTree = "<group>"; };
+		4503CDE81ED7ADE200AB3B78 /* SodaFountain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SodaFountain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4503CDEB1ED7ADE200AB3B78 /* SodaFountain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SodaFountain.h; sourceTree = "<group>"; };
 		4503CDEC1ED7ADE200AB3B78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4503CDF11ED7ADE200AB3B78 /* SodaTasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SodaTasterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4503CDF11ED7ADE200AB3B78 /* SodaFountainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SodaFountainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4503CDF61ED7ADE200AB3B78 /* TestBundlesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBundlesTests.swift; sourceTree = "<group>"; };
 		4503CDF81ED7ADE200AB3B78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		454B3A6522022CF800633762 /* TestBundles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBundles.swift; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4503CDF21ED7ADE200AB3B78 /* SodaTaster.framework in Frameworks */,
+				4503CDF21ED7ADE200AB3B78 /* SodaFountain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,8 +63,8 @@
 		4503CDDE1ED7ADE200AB3B78 = {
 			isa = PBXGroup;
 			children = (
-				4503CDEA1ED7ADE200AB3B78 /* SodaTaster */,
-				4503CDF51ED7ADE200AB3B78 /* SodaTasterTests */,
+				4503CDEA1ED7ADE200AB3B78 /* SodaFountain */,
+				4503CDF51ED7ADE200AB3B78 /* SodaFountainTests */,
 				4503CDE91ED7ADE200AB3B78 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,33 +72,33 @@
 		4503CDE91ED7ADE200AB3B78 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4503CDE81ED7ADE200AB3B78 /* SodaTaster.framework */,
-				4503CDF11ED7ADE200AB3B78 /* SodaTasterTests.xctest */,
+				4503CDE81ED7ADE200AB3B78 /* SodaFountain.framework */,
+				4503CDF11ED7ADE200AB3B78 /* SodaFountainTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4503CDEA1ED7ADE200AB3B78 /* SodaTaster */ = {
+		4503CDEA1ED7ADE200AB3B78 /* SodaFountain */ = {
 			isa = PBXGroup;
 			children = (
 				459194352219FDCD00EC3179 /* Assets */,
-				4503CDEB1ED7ADE200AB3B78 /* SodaTaster.h */,
+				4503CDEB1ED7ADE200AB3B78 /* SodaFountain.h */,
 				4503CDEC1ED7ADE200AB3B78 /* Info.plist */,
 				454B3A6522022CF800633762 /* TestBundles.swift */,
 				459194372219FE2100EC3179 /* AssetSource.swift */,
 				454B3A6722022D9200633762 /* TestAssets.swift */,
 			);
-			path = SodaTaster;
+			path = SodaFountain;
 			sourceTree = "<group>";
 		};
-		4503CDF51ED7ADE200AB3B78 /* SodaTasterTests */ = {
+		4503CDF51ED7ADE200AB3B78 /* SodaFountainTests */ = {
 			isa = PBXGroup;
 			children = (
 				4503CDF61ED7ADE200AB3B78 /* TestBundlesTests.swift */,
 				454B3A6B22023B5B00633762 /* TestAssetsTests.swift */,
 				4503CDF81ED7ADE200AB3B78 /* Info.plist */,
 			);
-			path = SodaTasterTests;
+			path = SodaFountainTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,16 +108,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4503CDF91ED7ADE200AB3B78 /* SodaTaster.h in Headers */,
+				4503CDF91ED7ADE200AB3B78 /* SodaFountain.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4503CDE71ED7ADE200AB3B78 /* SodaTaster */ = {
+		4503CDE71ED7ADE200AB3B78 /* SodaFountain */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4503CDFC1ED7ADE200AB3B78 /* Build configuration list for PBXNativeTarget "SodaTaster" */;
+			buildConfigurationList = 4503CDFC1ED7ADE200AB3B78 /* Build configuration list for PBXNativeTarget "SodaFountain" */;
 			buildPhases = (
 				4503CDE31ED7ADE200AB3B78 /* Sources */,
 				458AE1D32180EF0600C330E4 /* Resources */,
@@ -128,14 +128,14 @@
 			);
 			dependencies = (
 			);
-			name = SodaTaster;
-			productName = SodaTaster;
-			productReference = 4503CDE81ED7ADE200AB3B78 /* SodaTaster.framework */;
+			name = SodaFountain;
+			productName = SodaFountain;
+			productReference = 4503CDE81ED7ADE200AB3B78 /* SodaFountain.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4503CDF01ED7ADE200AB3B78 /* SodaTasterTests */ = {
+		4503CDF01ED7ADE200AB3B78 /* SodaFountainTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4503CDFF1ED7ADE200AB3B78 /* Build configuration list for PBXNativeTarget "SodaTasterTests" */;
+			buildConfigurationList = 4503CDFF1ED7ADE200AB3B78 /* Build configuration list for PBXNativeTarget "SodaFountainTests" */;
 			buildPhases = (
 				4503CDED1ED7ADE200AB3B78 /* Sources */,
 				4503CDEE1ED7ADE200AB3B78 /* Frameworks */,
@@ -146,9 +146,9 @@
 			dependencies = (
 				4503CDF41ED7ADE200AB3B78 /* PBXTargetDependency */,
 			);
-			name = SodaTasterTests;
-			productName = SodaTasterTests;
-			productReference = 4503CDF11ED7ADE200AB3B78 /* SodaTasterTests.xctest */;
+			name = SodaFountainTests;
+			productName = SodaFountainTests;
+			productReference = 4503CDF11ED7ADE200AB3B78 /* SodaFountainTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -173,7 +173,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4503CDE21ED7ADE200AB3B78 /* Build configuration list for PBXProject "SodaTaster" */;
+			buildConfigurationList = 4503CDE21ED7ADE200AB3B78 /* Build configuration list for PBXProject "SodaFountain" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -186,8 +186,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4503CDE71ED7ADE200AB3B78 /* SodaTaster */,
-				4503CDF01ED7ADE200AB3B78 /* SodaTasterTests */,
+				4503CDE71ED7ADE200AB3B78 /* SodaFountain */,
+				4503CDF01ED7ADE200AB3B78 /* SodaFountainTests */,
 			);
 		};
 /* End PBXProject section */
@@ -235,7 +235,7 @@
 /* Begin PBXTargetDependency section */
 		4503CDF41ED7ADE200AB3B78 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4503CDE71ED7ADE200AB3B78 /* SodaTaster */;
+			target = 4503CDE71ED7ADE200AB3B78 /* SodaFountain */;
 			targetProxy = 4503CDF31ED7ADE200AB3B78 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -368,10 +368,10 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = SodaTaster/Info.plist;
+				INFOPLIST_FILE = SodaFountain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = app.repla.SodaTaster;
+				PRODUCT_BUNDLE_IDENTIFIER = app.repla.SodaFountain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -390,10 +390,10 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = SodaTaster/Info.plist;
+				INFOPLIST_FILE = SodaFountain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = app.repla.SodaTaster;
+				PRODUCT_BUNDLE_IDENTIFIER = app.repla.SodaFountain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -405,9 +405,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = SodaTasterTests/Info.plist;
+				INFOPLIST_FILE = SodaFountainTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = app.repla.SodaTasterTests;
+				PRODUCT_BUNDLE_IDENTIFIER = app.repla.SodaFountainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -418,9 +418,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = SodaTasterTests/Info.plist;
+				INFOPLIST_FILE = SodaFountainTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = app.repla.SodaTasterTests;
+				PRODUCT_BUNDLE_IDENTIFIER = app.repla.SodaFountainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -429,7 +429,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4503CDE21ED7ADE200AB3B78 /* Build configuration list for PBXProject "SodaTaster" */ = {
+		4503CDE21ED7ADE200AB3B78 /* Build configuration list for PBXProject "SodaFountain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4503CDFA1ED7ADE200AB3B78 /* Debug */,
@@ -438,7 +438,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4503CDFC1ED7ADE200AB3B78 /* Build configuration list for PBXNativeTarget "SodaTaster" */ = {
+		4503CDFC1ED7ADE200AB3B78 /* Build configuration list for PBXNativeTarget "SodaFountain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4503CDFD1ED7ADE200AB3B78 /* Debug */,
@@ -447,7 +447,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4503CDFF1ED7ADE200AB3B78 /* Build configuration list for PBXNativeTarget "SodaTasterTests" */ = {
+		4503CDFF1ED7ADE200AB3B78 /* Build configuration list for PBXNativeTarget "SodaFountainTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4503CE001ED7ADE200AB3B78 /* Debug */,

@@ -1,12 +1,12 @@
 //
 //  TestAssetsTests.swift
-//  SodaTasterTests
+//  SodaFountainTests
 //
 //  Created by Roben Kleene on 1/30/19.
 //  Copyright © 2019 Roben Kleene. All rights reserved.
 //
 
-@testable import SodaTaster
+@testable import SodaFountain
 import XCTest
 
 class TestAssetsTests: XCTestCase {
