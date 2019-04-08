@@ -1,5 +1,5 @@
 //
-//  TestBundles.swift
+//  TestPlugins.swift
 //  SodaFountain
 //
 //  Created by Roben Kleene on 1/30/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class TestBundles: AssetSource {
+public class TestPlugins: AssetSource {
     // MARK: Public
 
     // Plugins
@@ -28,7 +28,7 @@ public class TestBundles: AssetSource {
     public static let testPluginNameNonexistent = "Nonexistent"
 
     // Metadata
-    public static let testPluginFileExtension = "replabundle"
+    public static let testPluginFileExtension = "replaplugin"
 
     // Collections
     public static let testPluginDirectoryNames = testPluginNames.map {
@@ -60,12 +60,12 @@ public class TestBundles: AssetSource {
         testPluginNameTestServer,
         testPluginNameTestLog
     ]
-    static let rootTestBundlePluginsPathComponent = assetPathcomponent.appending("bundles")
+    static let rootTestBundlePluginsPathComponent = assetPathcomponent.appending("packages")
 
     // Directories
 
     public static var testPluginsDirectoryURL: URL {
-        return Bundle(for: TestBundles.self).url(forResource: rootTestBundlePluginsPathComponent,
+        return Bundle(for: TestPlugins.self).url(forResource: rootTestBundlePluginsPathComponent,
                                                  withExtension: nil)!
     }
 
