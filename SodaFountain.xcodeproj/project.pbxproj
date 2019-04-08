@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4503CDF21ED7ADE200AB3B78 /* SodaFountain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4503CDE81ED7ADE200AB3B78 /* SodaFountain.framework */; };
-		4503CDF71ED7ADE200AB3B78 /* TestBundlesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503CDF61ED7ADE200AB3B78 /* TestBundlesTests.swift */; };
+		4503CDF71ED7ADE200AB3B78 /* TestPluginsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503CDF61ED7ADE200AB3B78 /* TestPluginsTests.swift */; };
 		4503CDF91ED7ADE200AB3B78 /* SodaFountain.h in Headers */ = {isa = PBXBuildFile; fileRef = 4503CDEB1ED7ADE200AB3B78 /* SodaFountain.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		454B3A6622022CF800633762 /* TestBundles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B3A6522022CF800633762 /* TestBundles.swift */; };
+		454B3A6622022CF800633762 /* TestPlugins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B3A6522022CF800633762 /* TestPlugins.swift */; };
 		454B3A6822022D9200633762 /* TestAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B3A6722022D9200633762 /* TestAssets.swift */; };
 		454B3A6C22023B5B00633762 /* TestAssetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B3A6B22023B5B00633762 /* TestAssetsTests.swift */; };
 		459194362219FDCD00EC3179 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 459194352219FDCD00EC3179 /* Assets */; };
@@ -32,9 +32,9 @@
 		4503CDEB1ED7ADE200AB3B78 /* SodaFountain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SodaFountain.h; sourceTree = "<group>"; };
 		4503CDEC1ED7ADE200AB3B78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4503CDF11ED7ADE200AB3B78 /* SodaFountainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SodaFountainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4503CDF61ED7ADE200AB3B78 /* TestBundlesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBundlesTests.swift; sourceTree = "<group>"; };
+		4503CDF61ED7ADE200AB3B78 /* TestPluginsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPluginsTests.swift; sourceTree = "<group>"; };
 		4503CDF81ED7ADE200AB3B78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		454B3A6522022CF800633762 /* TestBundles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBundles.swift; sourceTree = "<group>"; };
+		454B3A6522022CF800633762 /* TestPlugins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPlugins.swift; sourceTree = "<group>"; };
 		454B3A6722022D9200633762 /* TestAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAssets.swift; sourceTree = "<group>"; };
 		454B3A6B22023B5B00633762 /* TestAssetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAssetsTests.swift; sourceTree = "<group>"; };
 		459194352219FDCD00EC3179 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
@@ -84,7 +84,7 @@
 				459194352219FDCD00EC3179 /* Assets */,
 				4503CDEB1ED7ADE200AB3B78 /* SodaFountain.h */,
 				4503CDEC1ED7ADE200AB3B78 /* Info.plist */,
-				454B3A6522022CF800633762 /* TestBundles.swift */,
+				454B3A6522022CF800633762 /* TestPlugins.swift */,
 				459194372219FE2100EC3179 /* AssetSource.swift */,
 				454B3A6722022D9200633762 /* TestAssets.swift */,
 			);
@@ -94,7 +94,7 @@
 		4503CDF51ED7ADE200AB3B78 /* SodaFountainTests */ = {
 			isa = PBXGroup;
 			children = (
-				4503CDF61ED7ADE200AB3B78 /* TestBundlesTests.swift */,
+				4503CDF61ED7ADE200AB3B78 /* TestPluginsTests.swift */,
 				454B3A6B22023B5B00633762 /* TestAssetsTests.swift */,
 				4503CDF81ED7ADE200AB3B78 /* Info.plist */,
 			);
@@ -216,7 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				454B3A6822022D9200633762 /* TestAssets.swift in Sources */,
-				454B3A6622022CF800633762 /* TestBundles.swift in Sources */,
+				454B3A6622022CF800633762 /* TestPlugins.swift in Sources */,
 				459194382219FE2100EC3179 /* AssetSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,7 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				454B3A6C22023B5B00633762 /* TestAssetsTests.swift in Sources */,
-				4503CDF71ED7ADE200AB3B78 /* TestBundlesTests.swift in Sources */,
+				4503CDF71ED7ADE200AB3B78 /* TestPluginsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
