@@ -17,6 +17,7 @@ public class TestPlugins: AssetSource {
     public static let testPluginNameHelloWorld = "HelloWorld"
     public static let testPluginNameInvalid = "Invalid"
     public static let testPluginNamePrint = "Print"
+    public static let testPluginNameEcho = "Echo"
     public static let testPluginCommandPrint = "print.rb"
     public static let testPluginNameTestEnvironment = "TestEnvironment"
     public static let testPluginNameTestLog = "TestLog"
@@ -51,14 +52,15 @@ public class TestPlugins: AssetSource {
 
     static let testPluginNames = [
         testPluginNameCat,
+        testPluginNameEcho,
         testPluginNameHelloWorld,
         testPluginNameInvalid,
         testPluginNamePrint,
         testPluginNameTestEnvironment,
         testPluginNameTestFileExtension,
+        testPluginNameTestLog,
         testPluginNameTestPromptInterrupt,
-        testPluginNameTestServer,
-        testPluginNameTestLog
+        testPluginNameTestServer
     ]
     static let rootTestBundlePluginsPathComponent = assetPathcomponent.appending("packages")
 
