@@ -57,7 +57,7 @@ class TestPluginsTests: XCTestCase {
         XCTAssertNil(TestPlugins.urlForPlugin(withName: TestPlugins.testPluginNameNonexistent))
         XCTAssertNil(TestPlugins.pathForPlugin(withName: TestPlugins.testPluginNameNonexistent))
     }
-    
+
     func testOutsidePlugin() {
         var isDir: ObjCBool = false
         var exists = FileManager.default.fileExists(atPath: TestPlugins.testOutsidePluginPath,
@@ -65,7 +65,7 @@ class TestPluginsTests: XCTestCase {
         XCTAssertTrue(exists)
         XCTAssertTrue(isDir.boolValue)
         exists = FileManager.default.fileExists(atPath: TestPlugins.testOutsidePluginURL.path,
-                                                    isDirectory: &isDir)
+                                                isDirectory: &isDir)
         XCTAssertTrue(exists)
         XCTAssertTrue(isDir.boolValue)
     }
