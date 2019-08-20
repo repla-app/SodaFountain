@@ -27,6 +27,8 @@ public class TestPlugins: AssetSource {
 
     // Special
     public static let testPluginNameNonexistent = "Nonexistent"
+    public static let testPluginNameOutside = "Data"
+    public static let testPluginNameOutsidePathComponent = "Assets/repla-ruby/test/data"
 
     // Metadata
     public static let testPluginFileExtension = "replaplugin"
@@ -94,6 +96,18 @@ public class TestPlugins: AssetSource {
             return nil
         }
         return pluginURL
+    }
+
+    // Outside Plugin
+
+    public static var testOutsidePluginURL: URL {
+        let baseURL = Bundle(for: TestPlugins.self).url(forResource: testPluginNameOutsidePathComponent,
+                                                        withExtension: nil)!
+        return baseURL.appendingPathComponent(testPluginNameOutside).appendingPathExtension(testPluginFileExtension)
+    }
+
+    public static var testOutsidePluginPath: String {
+        return testOutsidePluginURL.path
     }
 
     // Helper
