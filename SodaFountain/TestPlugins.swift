@@ -12,6 +12,8 @@ public class TestPlugins: AssetSource {
     // MARK: Public
 
     // Plugins
+    
+    // Ruby
     public static let testPluginNameCat = "Cat"
     public static let testPluginCommandCat = "cat.sh"
     public static let testPluginNameHelloWorld = "HelloWorld"
@@ -24,6 +26,9 @@ public class TestPlugins: AssetSource {
     public static let testPluginNameTestFileExtension = "FileExtension"
     public static let testPluginNameTestPromptInterrupt = "PromptInterrupt"
     public static let testPluginNameTestServer = "TestServer"
+    
+    // Node
+    public static let testPluginNameTestNode = "TestNode"
 
     // Special
     public static let testPluginNameNonexistent = "Nonexistent"
@@ -39,6 +44,7 @@ public class TestPlugins: AssetSource {
     }
 
     // Generic
+
     public static let testPluginName = testPluginNameCat
     public static let testPluginNameTwo = testPluginNamePrint
     public static let testPluginCommand = testPluginCommandCat
@@ -49,7 +55,7 @@ public class TestPlugins: AssetSource {
     public static let testPluginOptionsEnabledName = testPluginNameHelloWorld
     public static let testPluginOptionsDisabledName = testPluginNameTestLog
     public static let testPluginOptionsNilName = testPluginNamePrint
-
+    
     // MARK: Private
 
     static let testPluginNames = [
@@ -62,7 +68,8 @@ public class TestPlugins: AssetSource {
         testPluginNameTestFileExtension,
         testPluginNameTestLog,
         testPluginNameTestPromptInterrupt,
-        testPluginNameTestServer
+        testPluginNameTestServer,
+        testPluginNameTestNode
     ]
     static let rootTestBundlePluginsPathComponent = assetPathcomponent.appending("packages")
 
