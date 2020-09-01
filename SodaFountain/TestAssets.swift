@@ -62,7 +62,8 @@ public class TestAssets: AssetSource {
                             subdirectory: String) -> URL {
         guard let fileURL = Bundle(for: TestAssets.self).url(forResource: name,
                                                              withExtension: fileExtension,
-                                                             subdirectory: subdirectory) else {
+                                                             subdirectory: subdirectory)
+        else {
             assert(false)
             return URL(string: "")!
         }

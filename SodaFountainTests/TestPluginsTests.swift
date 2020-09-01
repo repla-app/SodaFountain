@@ -21,7 +21,8 @@ class TestPluginsTests: XCTestCase {
         let pathContentsSet = Set(pathContents)
 
         guard let urls = try? FileManager.default.contentsOfDirectory(at: url,
-                                                                      includingPropertiesForKeys: nil) else {
+                                                                      includingPropertiesForKeys: nil)
+        else {
             XCTFail()
             return
         }
