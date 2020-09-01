@@ -1,3 +1,6 @@
 [submodule "SodaFountain/Assets/repla-ruby"]
 	path = SodaFountain/Assets/repla-ruby
 	url = https://github.com/repla-app/repla-ruby.git
+[submodule "SodaFountain/Assets/repla-node"]
+	path = SodaFountain/Assets/repla-node
+	url = https://github.com/repla-app/repla-node.git
