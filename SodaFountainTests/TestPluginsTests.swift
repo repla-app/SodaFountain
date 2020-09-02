@@ -19,7 +19,7 @@ class TestPluginsTests: XCTestCase {
     func testPluginsDirectory() {
         let pluginDirectoryURLs = TestPlugins.testPluginsDirectoryURLs
         var directoryNames = [String]()
-        
+
         for pluginDirectoryURL in pluginDirectoryURLs {
             guard let urls = try? FileManager.default.contentsOfDirectory(at: pluginDirectoryURL,
                                                                           includingPropertiesForKeys: nil)
@@ -30,7 +30,6 @@ class TestPluginsTests: XCTestCase {
             let lastPathComponents = urls.map { $0.lastPathComponent }
             directoryNames.append(contentsOf: lastPathComponents)
         }
-
 
         let pathComponentsSet = Set(directoryNames)
         XCTAssertEqual(pathComponentsSet, Set(TestPlugins.testPluginDirectoryNames))
