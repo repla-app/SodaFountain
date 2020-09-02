@@ -76,7 +76,7 @@ public class TestPlugins: AssetSource {
     // Directories
 
     public static var testPluginsDirectoryURLs: [URL] {
-        let urls = assetPathComponents.compactMap { Bundle(for: TestPlugins.self).url(forResource: $0, withExtension: nil) }
+        let urls = rootTestBundlePluginsPathComponents.compactMap { Bundle(for: TestPlugins.self).url(forResource: $0, withExtension: nil) }
         assert(urls.count == assetPathComponents.count)
         return urls
     }
