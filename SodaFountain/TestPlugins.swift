@@ -79,7 +79,7 @@ public class TestPlugins: AssetSource {
         return assetPathComponents.map { Bundle(for: TestPlugins.self).url(forResource: $0, withExtension: nil)! }
     }
 
-    public static var testPluginsDirectoryPath: [String] {
+    public static var testPluginsDirectoryPaths: [String] {
         return testPluginsDirectoryURLs.map { $0.path }
     }
 
