@@ -76,7 +76,9 @@ public class TestPlugins: AssetSource {
     // Directories
 
     public static var testPluginsDirectoryURLs: [URL] {
-        return assetPathComponents.map { Bundle(for: TestPlugins.self).url(forResource: $0, withExtension: nil)! }
+        let urls = assetPathComponents.compactMap { Bundle(for: TestPlugins.self).url(forResource: $0, withExtension: nil) }
+        assert(urls.count == assetPathComponents.count)
+        return urls
     }
 
     public static var testPluginsDirectoryPaths: [String] {
