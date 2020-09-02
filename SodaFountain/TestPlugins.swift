@@ -71,17 +71,16 @@ public class TestPlugins: AssetSource {
         testPluginNameTestServer,
         testPluginNameTestNode
     ]
-    static let rootTestBundlePluginsPathComponent = assetPathcomponent.appending("packages")
+    static let rootTestBundlePluginsPathComponents = assetPathComponents.map { $0.appending("packages") }
 
     // Directories
 
-    public static var testPluginsDirectoryURL: URL {
-        return Bundle(for: TestPlugins.self).url(forResource: rootTestBundlePluginsPathComponent,
-                                                 withExtension: nil)!
+    public static var testPluginsDirectoryURLs: [URL] {
+        return assetPathComponents.map { Bundle(for: TestPlugins.self).url(forResource: $0, withExtension: nil)! }
     }
 
-    public static var testPluginsDirectoryPath: String {
-        return testPluginsDirectoryURL.path
+    public static var testPluginsDirectoryPath: [String] {
+        return testPluginsDirectoryURLs.map { $0.path }
     }
 
     // Plugins
@@ -91,19 +90,22 @@ public class TestPlugins: AssetSource {
     }
 
     public class func urlForPlugin(withName name: String) -> URL? {
-        let pluginURL = testPluginsDirectoryURL
-            .appendingPathComponent(name)
-            .appendingPathExtension(testPluginFileExtension)
-        var isDir: ObjCBool = false
-
-        guard
-            FileManager.default.fileExists(atPath: pluginURL.path,
-                                           isDirectory: &isDir),
-            isDir.boolValue
-        else {
-            return nil
+        for directoryURL in testPluginsDirectoryURLs {
+            let pluginURL = directoryURL
+                .appendingPathComponent(name)
+                .appendingPathExtension(testPluginFileExtension)
+            var isDir: ObjCBool = false
+            guard
+                FileManager.default.fileExists(atPath: pluginURL.path,
+                                               isDirectory: &isDir),
+                isDir.boolValue
+            else {
+                continue
+            }
+            return pluginURL
         }
-        return pluginURL
+
+        return nil
     }
 
     // Outside Plugin

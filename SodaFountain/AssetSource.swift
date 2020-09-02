@@ -9,5 +9,7 @@
 import Foundation
 
 public class AssetSource {
-    static let assetPathcomponent = "Assets/repla-ruby/lib/repla/test/"
+    static let assetPathComponentRuby = "Assets/repla-ruby/lib/repla/test/"
+    static let assetPathComponentNode = "Assets/repla-node/lib/repla/test/"
+    static let assetPathComponents = [assetPathComponentRuby, assetPathComponentNode]
 }
