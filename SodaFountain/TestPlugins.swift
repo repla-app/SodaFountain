@@ -57,7 +57,7 @@ public class TestPlugins: AssetSource {
     public static let testPluginOptionsNilName = testPluginNamePrint
 
     // Plugins
-    
+
     public class func pathForPlugin(withName name: String) -> String? {
         return urlForPlugin(withName: name)?.path
     }
@@ -94,7 +94,7 @@ public class TestPlugins: AssetSource {
     }
 
     // Directories
-    
+
     public static var testBuiltInPluginsDirectoryURL: URL {
         guard let url = pluginsDirectoryURL(forPathComponent: packagesPathComponentRuby) else {
             assertionFailure()
