@@ -56,37 +56,8 @@ public class TestPlugins: AssetSource {
     public static let testPluginOptionsDisabledName = testPluginNameTestLog
     public static let testPluginOptionsNilName = testPluginNamePrint
 
-    // MARK: Private
-
-    static let testPluginNames = [
-        testPluginNameCat,
-        testPluginNameEcho,
-        testPluginNameHelloWorld,
-        testPluginNameInvalid,
-        testPluginNamePrint,
-        testPluginNameTestEnvironment,
-        testPluginNameTestFileExtension,
-        testPluginNameTestLog,
-        testPluginNameTestPromptInterrupt,
-        testPluginNameTestServer,
-        testPluginNameTestNode
-    ]
-    static let rootTestBundlePluginsPathComponents = assetPathComponents.map { $0.appending("packages") }
-
-    // Directories
-
-    public static var testPluginsDirectoryURLs: [URL] {
-        let urls = rootTestBundlePluginsPathComponents.compactMap { Bundle(for: TestPlugins.self).url(forResource: $0, withExtension: nil) }
-        assert(urls.count == assetPathComponents.count)
-        return urls
-    }
-
-    public static var testPluginsDirectoryPaths: [String] {
-        return testPluginsDirectoryURLs.map { $0.path }
-    }
-
     // Plugins
-
+    
     public class func pathForPlugin(withName name: String) -> String? {
         return urlForPlugin(withName: name)?.path
     }
@@ -122,7 +93,40 @@ public class TestPlugins: AssetSource {
         return testOutsidePluginURL.path
     }
 
+    // Directories
+
+    public static var testPluginsDirectoryURLs: [URL] {
+        let urls = rootTestBundlePluginsPathComponents.compactMap { pluginsDirectoryURL(forPathComponent: $0) }
+        assert(urls.count == assetPathComponents.count)
+        return urls
+    }
+
+    public static var testPluginsDirectoryPaths: [String] {
+        return testPluginsDirectoryURLs.map { $0.path }
+    }
+
+    // MARK: Private
+
+    static let testPluginNames = [
+        testPluginNameCat,
+        testPluginNameEcho,
+        testPluginNameHelloWorld,
+        testPluginNameInvalid,
+        testPluginNamePrint,
+        testPluginNameTestEnvironment,
+        testPluginNameTestFileExtension,
+        testPluginNameTestLog,
+        testPluginNameTestPromptInterrupt,
+        testPluginNameTestServer,
+        testPluginNameTestNode
+    ]
+    static let rootTestBundlePluginsPathComponents = assetPathComponents.map { $0.appending("packages") }
+
     // Helper
+
+    private class func pluginsDirectoryURL(forPathComponent pathComponent: String) -> URL? {
+        return Bundle(for: TestPlugins.self).url(forResource: pathComponent, withExtension: nil)
+    }
 
     private class func isTestPluginName(_ name: String) -> Bool {
         return testPluginNames.contains(name)
