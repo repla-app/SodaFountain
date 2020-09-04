@@ -94,10 +94,22 @@ public class TestPlugins: AssetSource {
     }
 
     // Directories
+    
+    public static var testBuiltInPluginsDirectoryURL: URL {
+        guard let url = pluginsDirectoryURL(forPathComponent: packagesPathComponentRuby) else {
+            assertionFailure()
+            return URL(string: "")!
+        }
+        return url
+    }
+
+    public static var testBuiltInPluginsDirectoryPath: String {
+        return testBuiltInPluginsDirectoryURL.path
+    }
 
     public static var testPluginsDirectoryURLs: [URL] {
-        let urls = rootTestBundlePluginsPathComponents.compactMap { pluginsDirectoryURL(forPathComponent: $0) }
-        assert(urls.count == assetPathComponents.count)
+        let urls = packagesPathComponents.compactMap { pluginsDirectoryURL(forPathComponent: $0) }
+        assert(urls.count == packagesPathComponents.count)
         return urls
     }
 
@@ -120,12 +132,15 @@ public class TestPlugins: AssetSource {
         testPluginNameTestServer,
         testPluginNameTestNode
     ]
-    static let rootTestBundlePluginsPathComponents = assetPathComponents.map { $0.appending("packages") }
 
     // Helper
 
     private class func pluginsDirectoryURL(forPathComponent pathComponent: String) -> URL? {
-        return Bundle(for: TestPlugins.self).url(forResource: pathComponent, withExtension: nil)
+        guard let url = Bundle(for: TestPlugins.self).url(forResource: pathComponent, withExtension: nil) else {
+            assertionFailure()
+            return nil
+        }
+        return url
     }
 
     private class func isTestPluginName(_ name: String) -> Bool {

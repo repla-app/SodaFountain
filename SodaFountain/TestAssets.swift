@@ -64,7 +64,7 @@ public class TestAssets: AssetSource {
                                                              withExtension: fileExtension,
                                                              subdirectory: subdirectory)
         else {
-            assert(false)
+            assertionFailure()
             return URL(string: "")!
         }
         return fileURL

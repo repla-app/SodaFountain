@@ -11,5 +11,7 @@ import Foundation
 public class AssetSource {
     static let assetPathComponentRuby = "Assets/repla-ruby/lib/repla/test/"
     static let assetPathComponentNode = "Assets/repla-node/"
-    static let assetPathComponents = [assetPathComponentRuby, assetPathComponentNode]
+    static let packagesPathComponentRuby = assetPathComponentRuby + "packages"
+    static let packagesPathComponentNode = assetPathComponentNode + "packages"
+    static let packagesPathComponents = [packagesPathComponentRuby, packagesPathComponentNode]
 }

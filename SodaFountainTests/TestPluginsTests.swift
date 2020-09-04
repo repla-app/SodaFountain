@@ -14,6 +14,7 @@ class TestPluginsTests: XCTestCase {
         let pluginDirectoryPathsSet = Set(TestPlugins.testPluginsDirectoryPaths)
         let pluginDirectoryPathsSetTwo = Set(TestPlugins.testPluginsDirectoryURLs.map { $0.path })
         XCTAssertEqual(pluginDirectoryPathsSet, pluginDirectoryPathsSetTwo)
+        XCTAssertTrue(pluginDirectoryPathsSet.contains(TestPlugins.testBuiltInPluginsDirectoryPath))
     }
 
     func testPluginsDirectory() {
