@@ -29,6 +29,7 @@ public class TestPlugins: AssetSource {
 
     // Node
     public static let testPluginNameTestNode = "TestNode"
+    public static let testPluginCommandTestNode = "App.js"
 
     // Special
     public static let testPluginNameNonexistent = "Nonexistent"
@@ -47,11 +48,14 @@ public class TestPlugins: AssetSource {
 
     public static let testPluginName = testPluginNameCat
     public static let testPluginNameTwo = testPluginNamePrint
+    public static let testPluginNameOtherDirectory = testPluginNameTestNode
     public static let testPluginCommand = testPluginCommandCat
     public static let testPluginCommandTwo = testPluginCommandPrint
+    public static let testPluginCommandOtherDirectory = testPluginCommandTestNode
     public static let testPluginNameNoPlugin = "Not a Plugin Name"
-    public static let testPluginDirectoryName = "\(testPluginName).\(testPluginFileExtension)"
-    public static let testPluginDirectoryNameTwo = "\(testPluginNameTwo).\(testPluginFileExtension)"
+    public static let testPluginDirectory = "\(testPluginName).\(testPluginFileExtension)"
+    public static let testPluginDirectoryTwo = "\(testPluginNameTwo).\(testPluginFileExtension)"
+    public static let testPluginDirectoryOtherDirectory = "\(testPluginNameTestNode).\(testPluginFileExtension)"
     public static let testPluginOptionsEnabledName = testPluginNameHelloWorld
     public static let testPluginOptionsDisabledName = testPluginNameTestLog
     public static let testPluginOptionsNilName = testPluginNamePrint
