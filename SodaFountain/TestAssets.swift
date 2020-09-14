@@ -53,8 +53,8 @@ public class TestAssets: AssetSource {
     private static let testTitleJavaScriptFilename = "title"
     private static let testJavaScriptFileExtension = "js"
     private static let testHTMLFileExtension = "html"
-    private static let testJavaScriptPathComponent = assetPathcomponent.appending("js")
-    private static let testHTMLPathComponent = assetPathcomponent.appending("html")
+    private static let testJavaScriptPathComponent = assetPathComponentRuby.appending("js")
+    private static let testHTMLPathComponent = assetPathComponentRuby.appending("html")
 
     // Helper
     private static func url(forResource name: String,
@@ -62,8 +62,9 @@ public class TestAssets: AssetSource {
                             subdirectory: String) -> URL {
         guard let fileURL = Bundle(for: TestAssets.self).url(forResource: name,
                                                              withExtension: fileExtension,
-                                                             subdirectory: subdirectory) else {
-            assert(false)
+                                                             subdirectory: subdirectory)
+        else {
+            assertionFailure()
             return URL(string: "")!
         }
         return fileURL

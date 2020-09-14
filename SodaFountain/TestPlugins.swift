@@ -12,6 +12,8 @@ public class TestPlugins: AssetSource {
     // MARK: Public
 
     // Plugins
+
+    // Ruby
     public static let testPluginNameCat = "Cat"
     public static let testPluginCommandCat = "cat.sh"
     public static let testPluginNameHelloWorld = "HelloWorld"
@@ -24,6 +26,10 @@ public class TestPlugins: AssetSource {
     public static let testPluginNameTestFileExtension = "FileExtension"
     public static let testPluginNameTestPromptInterrupt = "PromptInterrupt"
     public static let testPluginNameTestServer = "TestServer"
+
+    // Node
+    public static let testPluginNameTestNode = "TestNode"
+    public static let testPluginCommandTestNode = "App.js"
 
     // Special
     public static let testPluginNameNonexistent = "Nonexistent"
@@ -39,43 +45,20 @@ public class TestPlugins: AssetSource {
     }
 
     // Generic
+
     public static let testPluginName = testPluginNameCat
     public static let testPluginNameTwo = testPluginNamePrint
+    public static let testPluginNameOtherDirectory = testPluginNameTestNode
     public static let testPluginCommand = testPluginCommandCat
     public static let testPluginCommandTwo = testPluginCommandPrint
+    public static let testPluginCommandOtherDirectory = testPluginCommandTestNode
     public static let testPluginNameNoPlugin = "Not a Plugin Name"
-    public static let testPluginDirectoryName = "\(testPluginName).\(testPluginFileExtension)"
-    public static let testPluginDirectoryNameTwo = "\(testPluginNameTwo).\(testPluginFileExtension)"
+    public static let testPluginDirectory = "\(testPluginName).\(testPluginFileExtension)"
+    public static let testPluginDirectoryTwo = "\(testPluginNameTwo).\(testPluginFileExtension)"
+    public static let testPluginDirectoryOtherDirectory = "\(testPluginNameTestNode).\(testPluginFileExtension)"
     public static let testPluginOptionsEnabledName = testPluginNameHelloWorld
     public static let testPluginOptionsDisabledName = testPluginNameTestLog
     public static let testPluginOptionsNilName = testPluginNamePrint
-
-    // MARK: Private
-
-    static let testPluginNames = [
-        testPluginNameCat,
-        testPluginNameEcho,
-        testPluginNameHelloWorld,
-        testPluginNameInvalid,
-        testPluginNamePrint,
-        testPluginNameTestEnvironment,
-        testPluginNameTestFileExtension,
-        testPluginNameTestLog,
-        testPluginNameTestPromptInterrupt,
-        testPluginNameTestServer
-    ]
-    static let rootTestBundlePluginsPathComponent = assetPathcomponent.appending("packages")
-
-    // Directories
-
-    public static var testPluginsDirectoryURL: URL {
-        return Bundle(for: TestPlugins.self).url(forResource: rootTestBundlePluginsPathComponent,
-                                                 withExtension: nil)!
-    }
-
-    public static var testPluginsDirectoryPath: String {
-        return testPluginsDirectoryURL.path
-    }
 
     // Plugins
 
@@ -84,18 +67,22 @@ public class TestPlugins: AssetSource {
     }
 
     public class func urlForPlugin(withName name: String) -> URL? {
-        let pluginURL = testPluginsDirectoryURL
-            .appendingPathComponent(name)
-            .appendingPathExtension(testPluginFileExtension)
-        var isDir: ObjCBool = false
-
-        guard
-            FileManager.default.fileExists(atPath: pluginURL.path,
-                                           isDirectory: &isDir),
-            isDir.boolValue else {
-            return nil
+        for directoryURL in testPluginsDirectoryURLs {
+            let pluginURL = directoryURL
+                .appendingPathComponent(name)
+                .appendingPathExtension(testPluginFileExtension)
+            var isDir: ObjCBool = false
+            guard
+                FileManager.default.fileExists(atPath: pluginURL.path,
+                                               isDirectory: &isDir),
+                isDir.boolValue
+            else {
+                continue
+            }
+            return pluginURL
         }
-        return pluginURL
+
+        return nil
     }
 
     // Outside Plugin
@@ -110,7 +97,55 @@ public class TestPlugins: AssetSource {
         return testOutsidePluginURL.path
     }
 
+    // Directories
+
+    public static var testBuiltInPluginsDirectoryURL: URL {
+        guard let url = pluginsDirectoryURL(forPathComponent: packagesPathComponentRuby) else {
+            assertionFailure()
+            return URL(string: "")!
+        }
+        return url
+    }
+
+    public static var testBuiltInPluginsDirectoryPath: String {
+        return testBuiltInPluginsDirectoryURL.path
+    }
+
+    public static var testPluginsDirectoryURLs: [URL] {
+        let urls = packagesPathComponents.compactMap { pluginsDirectoryURL(forPathComponent: $0) }
+        assert(urls.count == packagesPathComponents.count)
+        return urls
+    }
+
+    public static var testPluginsDirectoryPaths: [String] {
+        return testPluginsDirectoryURLs.map { $0.path }
+    }
+
+    // MARK: Private
+
+    static let testPluginNames = [
+        testPluginNameCat,
+        testPluginNameEcho,
+        testPluginNameHelloWorld,
+        testPluginNameInvalid,
+        testPluginNamePrint,
+        testPluginNameTestEnvironment,
+        testPluginNameTestFileExtension,
+        testPluginNameTestLog,
+        testPluginNameTestPromptInterrupt,
+        testPluginNameTestServer,
+        testPluginNameTestNode
+    ]
+
     // Helper
+
+    private class func pluginsDirectoryURL(forPathComponent pathComponent: String) -> URL? {
+        guard let url = Bundle(for: TestPlugins.self).url(forResource: pathComponent, withExtension: nil) else {
+            assertionFailure()
+            return nil
+        }
+        return url
+    }
 
     private class func isTestPluginName(_ name: String) -> Bool {
         return testPluginNames.contains(name)

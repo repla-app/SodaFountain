@@ -10,26 +10,30 @@
 import XCTest
 
 class TestPluginsTests: XCTestCase {
+    func testDirectories() {
+        let pluginDirectoryPathsSet = Set(TestPlugins.testPluginsDirectoryPaths)
+        let pluginDirectoryPathsSetTwo = Set(TestPlugins.testPluginsDirectoryURLs.map { $0.path })
+        XCTAssertEqual(pluginDirectoryPathsSet, pluginDirectoryPathsSetTwo)
+        XCTAssertTrue(pluginDirectoryPathsSet.contains(TestPlugins.testBuiltInPluginsDirectoryPath))
+    }
+
     func testPluginsDirectory() {
-        let path = TestPlugins.testPluginsDirectoryPath
-        let url = TestPlugins.testPluginsDirectoryURL
+        let pluginDirectoryURLs = TestPlugins.testPluginsDirectoryURLs
+        var directoryNames = [String]()
 
-        guard let pathContents = try? FileManager.default.contentsOfDirectory(atPath: path) else {
-            XCTFail()
-            return
+        for pluginDirectoryURL in pluginDirectoryURLs {
+            guard let urls = try? FileManager.default.contentsOfDirectory(at: pluginDirectoryURL,
+                                                                          includingPropertiesForKeys: nil)
+            else {
+                XCTFail()
+                return
+            }
+            let lastPathComponents = urls.map { $0.lastPathComponent }
+            directoryNames.append(contentsOf: lastPathComponents)
         }
-        let pathContentsSet = Set(pathContents)
 
-        guard let urls = try? FileManager.default.contentsOfDirectory(at: url,
-                                                                      includingPropertiesForKeys: nil) else {
-            XCTFail()
-            return
-        }
-        let urlContents = urls.map { $0.lastPathComponent }
-        let urlContentsSet = Set(urlContents)
-
-        XCTAssertEqual(pathContentsSet, urlContentsSet)
-        XCTAssertEqual(pathContentsSet, Set(TestPlugins.testPluginDirectoryNames))
+        let pathComponentsSet = Set(directoryNames)
+        XCTAssertEqual(pathComponentsSet, Set(TestPlugins.testPluginDirectoryNames))
     }
 
     func testPluginWithName() {
