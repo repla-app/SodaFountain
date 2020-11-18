@@ -35,7 +35,8 @@ public class TestPlugins: AssetSource {
     public static let testPluginNameNonexistent = "Nonexistent"
     public static let testPluginNameOutside = "Data"
     public static let testPluginNameOutsidePathComponent = "Assets/repla-ruby/test/data"
-
+    public static let testPluginNameJSON = "TestNode"
+    
     // Metadata
     public static let testPluginFileExtension = "replaplugin"
 
