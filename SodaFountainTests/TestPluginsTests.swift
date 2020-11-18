@@ -63,8 +63,8 @@ class TestPluginsTests: XCTestCase {
     }
 
     func testJSONPlugin() {
-        XCTAssertNil(TestPlugins.urlForPlugin(withName: TestPlugins.testPluginNameJSON))
-        XCTAssertNil(TestPlugins.pathForPlugin(withName: TestPlugins.testPluginNameJSON))
+        XCTAssertNotNil(TestPlugins.urlForPlugin(withName: TestPlugins.testPluginNameJSON))
+        XCTAssertNotNil(TestPlugins.pathForPlugin(withName: TestPlugins.testPluginNameJSON))
     }
     
     func testOutsidePlugin() {

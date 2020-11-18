@@ -46,15 +46,15 @@ public class TestAssets: AssetSource {
     // MARK: Private
 
     // Assets
-    private static let testHTMLJQUERYFilename = "indexjquery"
+    private static let testHTMLJQUERYFilename = "index_jquery"
     private static let testTextJQUERYJavaScriptFilename = "textjquery"
     private static let testTextJavaScriptFilename = "text"
     private static let testHTMLFilename = "index"
     private static let testTitleJavaScriptFilename = "title"
     private static let testJavaScriptFileExtension = "js"
     private static let testHTMLFileExtension = "html"
-    private static let testJavaScriptPathComponent = assetPathComponentRuby.appending("js")
-    private static let testHTMLPathComponent = assetPathComponentRuby.appending("html")
+    private static let testJavaScriptPathComponent = assetPathComponentData.appending("js")
+    private static let testHTMLPathComponent = assetPathComponentData.appending("html")
 
     // Helper
     private static func url(forResource name: String,

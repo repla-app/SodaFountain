@@ -36,7 +36,7 @@ public class TestPlugins: AssetSource {
     public static let testPluginNameOutside = "Data"
     public static let testPluginNameOutsidePathComponent = "Assets/repla-ruby/test/data"
     public static let testPluginNameJSON = "TestNode"
-    
+
     // Metadata
     public static let testPluginFileExtension = "replaplugin"
 
@@ -101,7 +101,7 @@ public class TestPlugins: AssetSource {
     // Directories
 
     public static var testBuiltInPluginsDirectoryURL: URL {
-        guard let url = pluginsDirectoryURL(forPathComponent: packagesPathComponentRuby) else {
+        guard let url = pluginsDirectoryURL(forPathComponent: packagesPathComponentData) else {
             assertionFailure()
             return URL(string: "")!
         }
