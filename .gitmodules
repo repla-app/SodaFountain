@@ -3,4 +3,4 @@
 	url = https://github.com/repla-app/repla-ruby.git
 [submodule "SodaFountain/Assets/repla-test-data"]
 	path = SodaFountain/Assets/repla-test-data
-	url = git@github.com:repla-app/repla-test-data.git
+	url = https://github.com/repla-app/repla-test-data.git
