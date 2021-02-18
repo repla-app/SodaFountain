@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class AssetSource {
+public enum AssetSource {
     static let assetPathComponentData = "Assets/repla-test-data/"
     static let packagesPathComponentData = assetPathComponentData + "packages"
     static let packagesPathComponents = [packagesPathComponentData]
