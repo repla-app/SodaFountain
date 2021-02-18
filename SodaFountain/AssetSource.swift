@@ -8,10 +8,14 @@
 
 import Foundation
 
-public class AssetSource {
-    static let assetPathComponentRuby = "Assets/repla-ruby/lib/repla/test/"
-    static let assetPathComponentNode = "Assets/repla-node/"
-    static let packagesPathComponentRuby = assetPathComponentRuby + "packages"
-    static let packagesPathComponentNode = assetPathComponentNode + "packages"
-    static let packagesPathComponents = [packagesPathComponentRuby, packagesPathComponentNode]
+public protocol AssetSourceType {
+    static var assetPathComponentData: String { get }
+    static var packagesPathComponentData: String { get }
+    static var packagesPathComponents: [String] { get }
+}
+
+public class AssetSource: AssetSourceType {
+    public static let assetPathComponentData = "Assets/repla-test-data/"
+    public static let packagesPathComponentData = assetPathComponentData + "packages"
+    public static let packagesPathComponents = [packagesPathComponentData]
 }

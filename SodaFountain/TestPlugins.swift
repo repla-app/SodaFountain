@@ -23,9 +23,12 @@ public class TestPlugins: AssetSource {
     public static let testPluginCommandPrint = "print.rb"
     public static let testPluginNameTestEnvironment = "TestEnvironment"
     public static let testPluginNameTestLog = "TestLog"
-    public static let testPluginNameTestFileExtension = "FileExtension"
     public static let testPluginNameTestPromptInterrupt = "PromptInterrupt"
     public static let testPluginNameTestServer = "TestServer"
+
+    // File Extensions
+    public static let testPluginNameTestFileExtension = "FileExtension"
+    public static let testPluginFileExtensions = ["txt", "html"]
 
     // Node
     public static let testPluginNameTestNode = "TestNode"
@@ -35,6 +38,7 @@ public class TestPlugins: AssetSource {
     public static let testPluginNameNonexistent = "Nonexistent"
     public static let testPluginNameOutside = "Data"
     public static let testPluginNameOutsidePathComponent = "Assets/repla-ruby/test/data"
+    public static let testPluginNameJSON = "TestNode"
 
     // Metadata
     public static let testPluginFileExtension = "replaplugin"
@@ -100,7 +104,7 @@ public class TestPlugins: AssetSource {
     // Directories
 
     public static var testBuiltInPluginsDirectoryURL: URL {
-        guard let url = pluginsDirectoryURL(forPathComponent: packagesPathComponentRuby) else {
+        guard let url = pluginsDirectoryURL(forPathComponent: packagesPathComponentData) else {
             assertionFailure()
             return URL(string: "")!
         }

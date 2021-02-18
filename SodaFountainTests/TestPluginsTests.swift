@@ -62,6 +62,11 @@ class TestPluginsTests: XCTestCase {
         XCTAssertNil(TestPlugins.pathForPlugin(withName: TestPlugins.testPluginNameNonexistent))
     }
 
+    func testJSONPlugin() {
+        XCTAssertNotNil(TestPlugins.urlForPlugin(withName: TestPlugins.testPluginNameJSON))
+        XCTAssertNotNil(TestPlugins.pathForPlugin(withName: TestPlugins.testPluginNameJSON))
+    }
+
     func testOutsidePlugin() {
         var isDir: ObjCBool = false
         var exists = FileManager.default.fileExists(atPath: TestPlugins.testOutsidePluginPath,
