@@ -1,2 +1,2 @@
-# `SodaFountain` [![Build Status](https://travis-ci.org/repla-app/SodaFountain.svg?branch=master)](https://travis-ci.org/repla-app/SodaFountain)
+# `SodaFountain` ![Status](https://github.com/robenkleene/sodafountain/actions/workflows/ci.yml/badge.svg) ![Status](https://github.com/robenkleene/sodafountain/actions/workflows/release.yml/badge.svg)
 

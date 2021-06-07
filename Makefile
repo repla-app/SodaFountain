@@ -1,6 +1,6 @@
 SCHEME = SodaFountain
 
-.PHONY: build test lint autocorrect swiftformat swiftlint_autocorrect bootstrap loc
+.PHONY: build test lint autocorrect swiftformat swiftlint_autocorrect bootstrap loc archive
 
 ci: test
 ac: autocorrect
@@ -22,6 +22,10 @@ build:
 
 bootstrap:
 	carthage bootstrap
+
+archive:
+	carthage build --no-skip-current
+	carthage archive SodaFountain
 
 test:
 	xcodebuild test \
