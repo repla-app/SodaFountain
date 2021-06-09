@@ -2,7 +2,7 @@ SCHEME = SodaFountain
 
 .PHONY: build test lint autocorrect swiftformat swiftlint_autocorrect bootstrap loc archive
 
-ci: bootstrap build
+ci: test
 ac: autocorrect
 autocorrect: swiftformat swiftlint_autocorrect
 
@@ -19,9 +19,6 @@ build:
 	xcodebuild build \
 		-alltargets \
 		-configuration Debug
-
-bootstrap:
-	carthage bootstrap
 
 archive:
 	carthage build --no-skip-current
