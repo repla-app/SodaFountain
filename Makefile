@@ -2,7 +2,7 @@ SCHEME = SodaFountain
 
 .PHONY: build test lint autocorrect swiftformat swiftlint_autocorrect bootstrap loc archive
 
-ci: build
+ci: test
 ac: autocorrect
 autocorrect: swiftformat swiftlint_autocorrect
 
